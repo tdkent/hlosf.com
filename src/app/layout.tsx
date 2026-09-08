@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Cormorant, Work_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
+import NavBar from "@/components/layout/NavBar";
 
 const cormorant = Cormorant({
   variable: "--font-cormorant",
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <div id="backdrop-hook"></div>
         <div id="modal-hook"></div>
         <Header />
+        <NavBar />
         <div className="min-h-[calc(100vh-16rem)]">
           <main className="w-full mx-auto my-12 px-2 max-w-225">
             {children}
