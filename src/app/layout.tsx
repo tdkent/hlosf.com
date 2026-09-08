@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
-import { Work_Sans } from "next/font/google";
+import { Cormorant, Work_Sans } from "next/font/google";
 import "./globals.css";
+
+const cormorant = Cormorant({
+  variable: "--font-cormorant",
+  subsets: ["latin"],
+  weight: ["300"],
+});
 
 const workSans = Work_Sans({
   variable: "--font-work-sans",
@@ -14,7 +20,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${workSans.variable} antialiased`}>
+    <html
+      lang="en"
+      className={`${workSans.variable} ${cormorant.variable} antialiased`}
+    >
       <body>
         <div id="backdrop-hook"></div>
         <div id="modal-hook"></div>
