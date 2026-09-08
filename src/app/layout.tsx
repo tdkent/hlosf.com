@@ -24,7 +24,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${workSans.variable} ${cormorant.variable} antialiased`}
     >
-      <body>
+      <body className="font-sans bg-background text-foreground">
         <div id="backdrop-hook"></div>
         <div id="modal-hook"></div>
         <div className="min-h-[calc(100vh-16rem)]">
