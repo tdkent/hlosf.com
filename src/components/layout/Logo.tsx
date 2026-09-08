@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Logo() {
   return (
-    <div className="flex flex-col items-center justify-center h-25 lg:h-32.5 2xl:h-40 bg-hero-pattern bg-no-repeat bg-cover bg-center">
+    <div className="flex flex-col items-center justify-center h-25 lg:h-32.5 2xl:h-40 bg-[url(/us-mint-bg.webp)] bg-no-repeat bg-cover bg-center">
       <p className="header-text z-10 font-serif text-center text-[6vw] sm:text-4xl 2xl:text-5xl text-white select-none">
         Historic Landmarks <span className="italic">of</span>{" "}
         <span className="text-sky-400">San Francisco</span>
