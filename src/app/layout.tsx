@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant, Work_Sans } from "next/font/google";
 import "./globals.css";
+import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import NavBar from "@/components/layout/NavBar";
 
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             {children}
           </main>
         </div>
+        <Footer />
       </body>
     </html>
   );
