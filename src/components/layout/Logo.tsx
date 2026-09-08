@@ -9,8 +9,8 @@ export default function Logo() {
       </p>
       <Image
         className="absolute w-20 aspect-square top-2.5 lg:w-27.5 2xl:w-35 rounded-full z-5 shadow shadow-black"
-        src={"/us-mint-fg.webp"}
-        alt={"Exterior of the US Mint building"}
+        src="/us-mint-fg.webp"
+        alt="Exterior of the US Mint building"
         width={330}
         height={220}
         sizes="(max-width: 1024px) 80px, (max-width: 1536px) 110px, 140px"
