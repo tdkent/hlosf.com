@@ -21,9 +21,17 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body>
+        <div id="backdrop-hook"></div>
+        <div id="modal-hook"></div>
+        <div className="min-h-[calc(100vh-16rem)]">
+          <main className="w-full mx-auto my-12 px-2 max-w-225">
+            {children}
+          </main>
+        </div>
+      </body>
     </html>
   );
 }
