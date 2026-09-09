@@ -3,7 +3,7 @@ import Link from "next/link";
 import { FaArrowCircleRight } from "react-icons/fa";
 import { config } from "@/lib/config";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <div>
       <div className="relative my-4 lg:my-10 mx-auto w-full aspect-3/2 z-[-1]">
