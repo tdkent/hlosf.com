@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FaArrowCircleRight } from "react-icons/fa";
 import { config } from "@/lib/config";
 
 export default function Home() {
@@ -52,9 +53,9 @@ export default function Home() {
         </p>
         <p className="mt-2">
           It seems therefore particularly appropriate for residents and visitors
-          alike to become more aware of the City&apos;s past. One way of
-          reaching this goal is by visiting the 38 California State Registered
-          Historical Landmarks to be found within San Francisco.
+          alike to become more aware of the City's past. One way of reaching
+          this goal is by visiting the 38 California State Registered Historical
+          Landmarks to be found within San Francisco.
         </p>
         <p className="mt-2">
           Anyone who has traveled in California has seen the handsome bronze
@@ -79,7 +80,7 @@ export default function Home() {
           while other sites remain unmarked.
         </p>
         <div className="flex flex-row items-center mt-4 text-lg">
-          {/* <FaArrowCircleRight className="mr-1" /> */}
+          <FaArrowCircleRight className="mr-1" />
           <Link href="/landmarks">Go To Landmarks Page</Link>
         </div>
       </article>
