@@ -18,3 +18,5 @@ export interface Landmark {
   description_meta: string;
   img_urls: string[];
 }
+
+export type SortMethod = "group" | "title_short" | "number";
