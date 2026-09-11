@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaLandmark } from "react-icons/fa";
 import { GrMapLocation } from "react-icons/gr";
-// import MapModal from "@/components/ui/MapModal";
+import MapModal from "@/components/ui/MapModal";
 import type { Landmark } from "@/lib/types";
 
 interface Props {
@@ -13,7 +13,7 @@ export default function SingleLandmarkInfo({ data }: Props) {
 
   return (
     <>
-      {/* {map && <MapModal data={data} setMap={setMap} />} */}
+      {map && <MapModal data={data} setMap={setMap} />}
       <div className="flex items-center justify-center">
         <FaLandmark className="mr-2 fill-slate-600" />
         <p className="text-slate-600">{data.number}</p>
