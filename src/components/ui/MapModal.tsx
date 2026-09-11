@@ -1,41 +1,53 @@
 import type { Dispatch, SetStateAction } from "react";
 import ReactDOM from "react-dom";
+import { FaWindowClose } from "react-icons/fa";
+import SingleLandmarkMap from "@/components/pages/landmark/SingleLandmarkMap";
 import Backdrop from "@/components/ui/Backdrop";
 import type { Landmark } from "@/lib/types";
 
 interface Props {
-  data: Landmark;
+  data: Landmark | Landmark[];
+  num?: number;
   setMap: Dispatch<SetStateAction<boolean>>;
 }
 
-const MapModalContent = (props: Props) => {
+const MapModalContent = ({ data, num, setMap }: Props) => {
   const content = (
     <div
       id="modal"
-      // aria-modal="true"
-      // aria-labelledby="landmark-name"
+      aria-modal="true"
+      aria-labelledby="landmark-name"
       className="fixed top-4 min-[375px]:top-16 md:top-20 w-full xl:w-4/5 xl:left-[10%] 2xl:w-1/2 2xl:left-[25%] 2xl:top-32 bg-white z-50 rounded-lg"
+      role="dialog"
     >
-      {/* <div className="py-1">
+      <div className="py-1">
         <h2
           id="landmark-name"
           className="px-2 flex items-center justify-center"
         >
           Map:{" "}
-          {!props.data.length
-            ? `${props.data.title_stub} (${props.data.number})`
-            : `Group ${props.num}`}
+          {Array.isArray(data)
+            ? `Group ${num}`
+            : `${data.title_stub} (${data.number})`}
         </h2>
       </div>
-      {!props.data.length ? (
-        <SingleLandmarkMap {...props} />
+      {Array.isArray(data) ? (
+        <>Group Map</>
+        // <GroupMap {...props} />
       ) : (
-        <GroupMap {...props} />
+        <SingleLandmarkMap data={data} />
       )}
-      <CloseButton
-        controls={"modal"}
-        closeClickHandler={() => props.setMap(false)}
-      /> */}
+      <div className="py-4">
+        <button
+          aria-controls="modal"
+          className="flex items-center mx-auto text-red-700"
+          onClick={() => setMap(false)}
+          type="button"
+        >
+          <FaWindowClose className="mr-1 fill-red-700" />
+          Close Window
+        </button>
+      </div>
     </div>
   );
   return ReactDOM.createPortal(
