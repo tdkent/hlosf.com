@@ -4,19 +4,19 @@ export interface Landmark {
   title_short: string;
   title_stub: string;
   number: number;
-  dedication_year: number;
+  dedication_year?: number;
   description_html: string;
   update_html?: string;
   group: number;
   group_order: number;
-  marker_onsite: "TRUE" | "FALSE";
+  marker_onsite: string;
   marker_inscription_html: string;
   marker_address: string;
   marker_coordinates_lat: number;
   marker_coordinates_lng: number;
   slug: string;
   description_meta: string;
-  img_urls: string[];
+  imgUrls: string[];
 }
 
 export type SortMethod = "group" | "title_short" | "number";

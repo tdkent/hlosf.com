@@ -13,8 +13,8 @@ export const allLandmarksReducedData = landmarkData.data.map((lm) => {
 });
 
 export const getSingleLandmark = (slug: string) => {
-  const landmark = landmarkData.data.filter((lm) => lm.slug === slug);
-  return landmark[0];
+  const landmark = landmarkData.data.find((lm) => lm.slug === slug);
+  return landmark;
 };
 
 export const getAllGroups = () => {
