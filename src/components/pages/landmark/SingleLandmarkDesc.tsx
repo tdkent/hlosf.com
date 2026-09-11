@@ -5,7 +5,7 @@ interface Props {
   descText: string;
 }
 
-const SingleLandmarkDesc = ({ descText }: Props) => {
+export default function SingleLandmarkDesc({ descText }: Props) {
   const clean = DOMPurify.sanitize(descText);
   const createDescMarkup = () => {
     return { __html: clean };
@@ -14,6 +14,4 @@ const SingleLandmarkDesc = ({ descText }: Props) => {
     // biome-ignore lint/security/noDangerouslySetInnerHtml: will remove later
     <div className={styles.desc} dangerouslySetInnerHTML={createDescMarkup()} />
   );
-};
-
-export default SingleLandmarkDesc;
+}

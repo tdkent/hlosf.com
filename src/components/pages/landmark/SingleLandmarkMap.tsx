@@ -7,7 +7,7 @@ interface Props {
   data: Landmark;
 }
 
-const SingleLandmarkMap = ({ data }: Props) => {
+export default function SingleLandmarkMap({ data }: Props) {
   const {
     marker_coordinates_lat,
     marker_coordinates_lng,
@@ -65,6 +65,4 @@ const SingleLandmarkMap = ({ data }: Props) => {
     group,
   ]);
   return <div className={`${styles.map}`} ref={mapRef} />;
-};
-
-export default SingleLandmarkMap;
+}

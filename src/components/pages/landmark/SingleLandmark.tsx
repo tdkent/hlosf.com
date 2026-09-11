@@ -1,11 +1,7 @@
 import SingleLandmarkDesc from "@/components/pages/landmark/SingleLandmarkDesc";
 import SingleLandmarkInfo from "@/components/pages/landmark/SingleLandmarkInfo";
+import SingleLandmarkUpdate from "@/components/pages/landmark/SingleLandmarkUpdate";
 import type { Landmark } from "@/lib/types";
-
-// import SingleLandmarkDesc from "./SingleLandmarkDesc";
-// import SingleLandmarkImages from "./SingleLandmarkImages";
-// import SingleLandmarkMarker from "./SingleLandmarkMarker";
-// import SingleLandmarkUpdate from "./SingleLandmarkUpdate";
 
 interface Props {
   data: Landmark;
@@ -17,9 +13,9 @@ export default function SingleLandmark({ data }: Props) {
       <SingleLandmarkInfo data={data} />
       <div className="pl-3 pr-5 font-light">
         <SingleLandmarkDesc descText={data.description_html} />
-        {/* {data.update_html && (
+        {data.update_html && (
           <SingleLandmarkUpdate updateText={data.update_html} />
-        )} */}
+        )}
         {/* <SingleLandmarkMarker
           markerText={data.marker_inscription_html}
           markerOnSite={data.marker_onsite}
