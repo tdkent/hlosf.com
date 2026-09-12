@@ -1,6 +1,7 @@
 import type { Dispatch, SetStateAction } from "react";
 import ReactDOM from "react-dom";
 import { FaWindowClose } from "react-icons/fa";
+import GroupMap from "@/components/pages/group/GroupMap";
 import SingleLandmarkMap from "@/components/pages/landmark/SingleLandmarkMap";
 import Backdrop from "@/components/ui/Backdrop";
 import type { Landmark } from "@/lib/types";
@@ -32,8 +33,7 @@ const MapModalContent = ({ data, num, setMap }: Props) => {
         </h2>
       </div>
       {Array.isArray(data) ? (
-        <>Group Map</>
-        // <GroupMap {...props} />
+        <GroupMap data={data} num={num as number} />
       ) : (
         <SingleLandmarkMap data={data} />
       )}

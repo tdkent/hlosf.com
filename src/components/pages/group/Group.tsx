@@ -14,7 +14,7 @@ export default function Group({ data, num, windowWidth }: Props) {
 
   return (
     <>
-      {map && <MapModal data={data} setMap={setMap} />}
+      {map && <MapModal data={data} num={num} setMap={setMap} />}
       <div className="mt-4 pb-4 pl-3 pr-5 border-t">
         <h3 className="text-lg font-medium mt-6">Group {num}</h3>
         <div>
