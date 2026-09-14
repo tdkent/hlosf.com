@@ -1,3 +1,5 @@
+"use client";
+
 import { Loader } from "@googlemaps/js-api-loader";
 import { useEffect, useRef } from "react";
 import type { Landmark } from "@/lib/types";
