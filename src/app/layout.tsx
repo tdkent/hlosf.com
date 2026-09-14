@@ -8,7 +8,8 @@ import NavBar from "@/components/layout/NavBar";
 const cormorant = Cormorant({
   variable: "--font-cormorant",
   subsets: ["latin"],
-  weight: ["300"],
+  weight: ["400"],
+  style: ["italic", "normal"],
 });
 
 const workSans = Work_Sans({
