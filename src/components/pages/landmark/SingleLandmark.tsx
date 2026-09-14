@@ -6,28 +6,37 @@ import SingleLandmarkUpdate from "@/components/pages/landmark/SingleLandmarkUpda
 import type { Landmark } from "@/lib/types";
 
 interface Props {
-  data: Landmark;
+  landmark: Landmark;
 }
 
-export default function SingleLandmark({ data }: Props) {
+export default function SingleLandmark({ landmark }: Props) {
+  const {
+    description_html,
+    update_html,
+    marker_inscription_html,
+    marker_onsite,
+    dedication_year,
+    imgUrls,
+    title,
+    number,
+  } = landmark;
+
   return (
     <article className="my-8 mx-2">
-      <SingleLandmarkInfo data={data} />
+      <SingleLandmarkInfo data={landmark} />
       <div className="pl-3 pr-5 font-light">
-        <SingleLandmarkDesc descText={data.description_html} />
-        {data.update_html && (
-          <SingleLandmarkUpdate updateText={data.update_html} />
-        )}
+        <SingleLandmarkDesc descText={description_html} />
+        {update_html && <SingleLandmarkUpdate updateText={update_html} />}
         <SingleLandmarkMarker
-          markerText={data.marker_inscription_html}
-          markerOnSite={data.marker_onsite}
-          markerYear={data.dedication_year}
+          markerText={marker_inscription_html}
+          markerOnSite={marker_onsite}
+          markerYear={dedication_year}
         />
-        {data.imgUrls.length ? (
+        {imgUrls.length ? (
           <SingleLandmarkImages
-            imgUrls={data.imgUrls}
-            title={data.title}
-            lmNum={data.number}
+            imgUrls={imgUrls}
+            title={title}
+            lmNum={number}
           />
         ) : null}
       </div>
