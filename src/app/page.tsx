@@ -22,7 +22,7 @@ export default function HomePage() {
           A note on the content
         </summary>
 
-        <p className="font-light mt-2 bg-background-secondary border border-border p-4">
+        <p className="font-light mt-2 bg-background-secondary border p-4">
           Much of the content on this site was created in 1976, and the text
           herein often refers to that year. This material was intended to be
           published at that time; it never was. But through the magic of the

@@ -10,3 +10,13 @@
   --font-sans: var(--font-work-sans);
   --font-serif: var(--font-cormorant);
 }
+
+@layer base {
+  * {
+    @apply border-border outline-foreground;
+  }
+
+  h1 {
+    @apply my-6 text-xl sm:text-2xl lg:text-3xl font-medium;
+  }
+}
