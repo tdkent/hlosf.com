@@ -1,6 +1,3 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import Group from "@/components/pages/group/Group";
 import MasterMap from "@/components/pages/group/MasterMap";
 import { getAllGroups } from "@/data/data";
@@ -8,15 +5,6 @@ import type { Landmark } from "@/lib/types";
 
 export default function GuidePage() {
   const groups = getAllGroups();
-  const [windowWidth, setWindowWidth] = useState<number | null>(null);
-
-  useEffect(() => {
-    const getWindowSize = () => {
-      const { innerWidth } = window;
-      setWindowWidth(innerWidth);
-    };
-    getWindowSize();
-  }, []);
 
   return (
     <div className="font-light">
@@ -45,11 +33,11 @@ export default function GuidePage() {
           For your convenience, the landmarks have been placed in five
           geographical groups with a suggested sequence for seeing the sites.
         </p>
-        <Group num={1} data={groups as Landmark[]} windowWidth={windowWidth} />
-        <Group num={2} data={groups as Landmark[]} windowWidth={windowWidth} />
-        <Group num={3} data={groups as Landmark[]} windowWidth={windowWidth} />
-        <Group num={4} data={groups as Landmark[]} windowWidth={windowWidth} />
-        <Group num={5} data={groups as Landmark[]} windowWidth={windowWidth} />
+        <Group num={1} data={groups as Landmark[]} />
+        <Group num={2} data={groups as Landmark[]} />
+        <Group num={3} data={groups as Landmark[]} />
+        <Group num={4} data={groups as Landmark[]} />
+        <Group num={5} data={groups as Landmark[]} />
       </div>
     </div>
   );

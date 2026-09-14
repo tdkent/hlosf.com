@@ -1,30 +1,22 @@
-"use client";
-
-import { useParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { notFound } from "next/navigation";
 import SingleLandmark from "@/components/pages/landmark/SingleLandmark";
-import { getSingleLandmark } from "@/data/data";
+import { getSingleLandmark } from "@/lib/getSingleLandmark";
 import type { Landmark } from "@/lib/types";
 
-export default function LandmarkPage() {
-  const { slug } = useParams<{ slug: string }>();
+export default async function LandmarkPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const landmark = getSingleLandmark(slug) as Landmark | undefined;
 
-  const [data, setData] = useState<Landmark | undefined>();
-
-  useEffect(() => {
-    const landmarkData = getSingleLandmark(slug);
-    setData(landmarkData);
-  }, [slug]);
-
-  //! This should be an error
-  if (!data) {
-    return "loading...";
-  }
+  if (!landmark) notFound();
 
   //! Format landmark number for metadata
   // if (data.number.toString().includes(".")) {
   //   data.number = data.number.toString().replace(".", "-");
   // }
 
-  return <SingleLandmark data={data} />;
+  return <SingleLandmark landmark={landmark} />;
 }
