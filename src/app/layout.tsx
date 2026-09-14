@@ -28,16 +28,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${workSans.variable} ${cormorant.variable} antialiased`}
     >
-      <body className="font-sans bg-background text-foreground">
+      <body className="font-sans bg-background text-foreground h-screen flex flex-col">
         <div id="backdrop-hook"></div>
         <div id="modal-hook"></div>
         <Header />
         <NavBar />
-        <div className="min-h-[calc(100vh-16rem)]">
-          <main className="w-full mx-auto my-12 px-2 max-w-225">
-            {children}
-          </main>
-        </div>
+        <main className="w-full flex-1">
+          <div className="my-12 px-2 w-full max-w-225 mx-auto">{children}</div>
+        </main>
         <Footer />
       </body>
     </html>
