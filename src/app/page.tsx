@@ -22,7 +22,7 @@ export default function HomePage() {
           A note on the content
         </summary>
 
-        <p className="font-light mt-2 text-[15px]">
+        <p className="font-light mt-2 bg-background-secondary border border-border p-4">
           Much of the content on this site was created in 1976, and the text
           herein often refers to that year. This material was intended to be
           published at that time; it never was. But through the magic of the
@@ -36,9 +36,9 @@ export default function HomePage() {
         </p>
       </details>
 
-      <article className="pl-2 pr-6 font-light">
-        <h1 className="my-6 text-xl sm:text-2xl font-medium">
-          Welcome to the historic landmarks of San Francisco
+      <article className="pl-2 pr-6 font-light text-lg">
+        <h1 className="my-6 text-xl sm:text-2xl lg:text-3xl font-medium">
+          Welcome to the historic landmarks of San Francisco!
         </h1>
         <p className="text-lg mt-2">
           For San Francisco 1976 is a twin bicentennial, the anniversary of the
