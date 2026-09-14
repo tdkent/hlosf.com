@@ -16,33 +16,26 @@ export default function HomePage() {
           sizes="(max-width: 900px) 100vw, 900px"
         />
       </div>
-      <aside className="pl-2 pr-6 my-8">
-        <details>
-          <summary>A note on the content</summary>
-          <div
-            id="content-note"
-            className="m-2 xl:my-2 pl-3 pr-6 pb-3 bg-slate-50 border rounded-lg dark:bg-background"
-          >
-            <p className="font-light mt-2">
-              Much of the content on this site was created in 1976, and the text
-              herein often refers to that year. This material was intended to be
-              published at that time; it never was. But through the magic of the
-              internet, it has been resurrected in the form you see.
-            </p>
-            <p className="font-light mt-2">
-              The great thing about most historic sites, and the plaques that
-              commemorate them, is that they don’t change much, if at all,
-              through time. Telegraph Hill is still Telegraph Hill, and Union
-              Square is still Union Square. So the stuff I wrote in that remote,
-              antediluvian time is still for the most part valid today. I have,
-              nonetheless, carefully reviewed the text and made changes and
-              updates where appropriate.
-            </p>
-            <p className="font-light mt-2">Enjoy!</p>
-            <p className="font-normal mt-2">Douglas Kent</p>
-          </div>
-        </details>
-      </aside>
+
+      <details className="pl-2 pr-6 my-8">
+        <summary className="cursor-pointer w-fit">
+          A note on the content
+        </summary>
+
+        <p className="font-light mt-2 text-[15px]">
+          Much of the content on this site was created in 1976, and the text
+          herein often refers to that year. This material was intended to be
+          published at that time; it never was. But through the magic of the
+          internet, it has been resurrected in the form you see. The great thing
+          about most historic sites, and the plaques that commemorate them, is
+          that they don’t change much, if at all, through time. Telegraph Hill
+          is still Telegraph Hill, and Union Square is still Union Square. So
+          the stuff I wrote in that remote, antediluvian time is still for the
+          most part valid today. I have, nonetheless, carefully reviewed the
+          text and made changes and updates where appropriate.
+        </p>
+      </details>
+
       <article className="pl-2 pr-6 font-light">
         <h1 className="my-6 text-xl sm:text-2xl font-medium">
           Welcome to the historic landmarks of San Francisco
@@ -79,7 +72,7 @@ export default function HomePage() {
           California Pioneers, the Daughters of the American Revolution, etc.,
           while other sites remain unmarked.
         </p>
-        <div className="flex flex-row items-center mt-4 text-lg">
+        <div className="flex flex-row items-center mt-4 text-lg gap-2">
           <FaArrowCircleRight className="mr-1" />
           <Link href="/landmarks">Go To Landmarks Page</Link>
         </div>
