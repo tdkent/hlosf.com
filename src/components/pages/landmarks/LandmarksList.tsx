@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { FaLandmark } from "react-icons/fa";
-import LandmarkLink from "@/components/pages/landmarks/LandmarkLink";
 import type { Landmark } from "@/lib/types";
 
 interface Props {
@@ -47,7 +46,6 @@ const LandmarksList = ({ sortedData, windowWidth, scrollId }: Props) => {
                 </ul>
               </div>
             </div>
-            <LandmarkLink id={lm.id} slug={lm.slug} />
           </div>
         );
       })}
