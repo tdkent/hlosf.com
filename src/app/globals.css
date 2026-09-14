@@ -5,6 +5,7 @@
   --color-background-secondary: oklch(96.8% 0.007 247);
   --color-foreground: oklch(20.8% 0.042 265);
   --color-border: oklch(92.9% 0.013 255);
+  --color-accent: oklch(74.6% 0.16 232);
 
   --font-sans: var(--font-work-sans);
   --font-serif: var(--font-cormorant);
