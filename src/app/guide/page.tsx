@@ -9,7 +9,7 @@ export default function GuidePage() {
   return (
     <div className="font-light">
       <div className="pl-3 pr-5">
-        <h1 className="text-2xl font-medium">Sightseeing Guide</h1>
+        <h1>Sightseeing Guide</h1>
         <p className="mt-2">
           By consulting the text and accompanying maps, you should have no
           trouble locating and visiting all of the City&#39;s 48 State

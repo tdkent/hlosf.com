@@ -37,9 +37,7 @@ export default function HomePage() {
       </details>
 
       <article className="pl-2 pr-6 font-light text-lg">
-        <h1 className="my-6 text-xl sm:text-2xl lg:text-3xl font-medium">
-          Welcome to the historic landmarks of San Francisco!
-        </h1>
+        <h1>Welcome to the historic landmarks of San Francisco!</h1>
         <p className="text-lg mt-2">
           For San Francisco 1976 is a twin bicentennial, the anniversary of the
           founding of both the Nation and the City.

@@ -62,7 +62,7 @@ export default function LandmarksPage() {
 
   return (
     <>
-      <h1 className="pl-3 pr-5 text-2xl font-medium">Index of Landmarks</h1>
+      <h1>Index of Landmarks</h1>
       <SortLandmarksList
         sortMethod={sortMethod}
         setSortMethod={setSortMethod}
