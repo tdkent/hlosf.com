@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Group from "@/components/pages/group/Group";
+import MasterMap from "@/components/pages/group/MasterMap";
 import { getAllGroups } from "@/data/data";
 import type { Landmark } from "@/lib/types";
 
@@ -34,7 +35,9 @@ export default function GuidePage() {
           Francisco county, with group numbers indicated. Click a marker to view
           name, group, and address information.
         </p>
-        <div>{/* <MasterMap data={groups} /> */}</div>
+        <div>
+          <MasterMap data={groups as Landmark[]} />
+        </div>
       </div>
       <div>
         <h2 className="mb-2 pl-3 text-xl font-medium">Groups</h2>
