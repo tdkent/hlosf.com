@@ -8,7 +8,7 @@ import NavBar from "@/components/layout/NavBar";
 const cormorant = Cormorant({
   variable: "--font-cormorant",
   subsets: ["latin"],
-  weight: ["400"],
+  weight: ["300"],
   style: ["italic", "normal"],
 });
 
@@ -25,10 +25,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="en"
-      className={`${workSans.variable} ${cormorant.variable} antialiased`}
-    >
+    <html lang="en" className={`${workSans.variable} ${cormorant.variable}`}>
       <body className="font-sans bg-background text-foreground h-screen flex flex-col">
         <div id="backdrop-hook"></div>
         <div id="modal-hook"></div>
