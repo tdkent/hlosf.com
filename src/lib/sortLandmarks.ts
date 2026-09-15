@@ -1,6 +1,6 @@
 import { data } from "@/data/data.json";
 
-export function getSortedLandmarks(sortMethod: string | null) {
+export function getSortedLandmarks(sortMethod: string | undefined) {
   switch (sortMethod) {
     case "group": {
       return [...data].sort((a, b) => a.group - b.group);

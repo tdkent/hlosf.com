@@ -1,15 +1,14 @@
-"use client";
-
-import { useSearchParams } from "next/navigation";
 import LandmarksList from "@/components/pages/landmarks/LandmarksList";
 import SortLandmarksList from "@/components/pages/landmarks/SortLandmarksList";
 import { getSortedLandmarks } from "@/lib/sortLandmarks";
 
-export default function LandmarksPage() {
-  const params = useSearchParams();
-  const sortParam = params.get("sort");
-
-  const sortedLandmarks = getSortedLandmarks(sortParam);
+export default async function LandmarksPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ [key: string]: string | undefined }>;
+}) {
+  const { sort } = await searchParams;
+  const sortedLandmarks = getSortedLandmarks(sort);
 
   return (
     <>
