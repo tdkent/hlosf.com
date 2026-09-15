@@ -37,10 +37,7 @@ export default function LandmarksPage() {
   return (
     <>
       <h1>Index of Landmarks</h1>
-      <SortLandmarksList
-        sortMethod={sortMethod}
-        setSortMethod={setSortMethod}
-      />
+      <SortLandmarksList />
       <LandmarksList sortedLandmarks={sortedData} />
     </>
   );
