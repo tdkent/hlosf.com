@@ -15,8 +15,8 @@ export default function LandmarksListItem({ landmark }: Props) {
       <Link href={`/landmarks/${slug}`} className="w-full">
         <div className="flex justify-between items-center gap-6 px-2 lg:px-4">
           <div className="flex flex-col gap-2">
-            <h2 className="text-pretty lg:text-lg">{title}</h2>
-            <div className="font-light text-sm md:text-base">
+            <span className="text-pretty font-medium lg:text-lg">{title}</span>
+            <div className="text-sm md:text-base">
               <div className="flex flex-row items-center gap-6 text-foreground-secondary">
                 <span className="flex flex-row items-center gap-1">
                   No. {updateComplexLmNumber(number)}

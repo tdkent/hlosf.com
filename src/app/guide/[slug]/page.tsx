@@ -27,9 +27,7 @@ export default async function GuideGroupPage({
         {groupSize} Registered Historical Landmarks in Group {groupId}.
       </p>
       <section>
-        <h2 className="text-xl font-medium">
-          Map: All Landmarks in Group {groupId}
-        </h2>
+        <h2>Map: All Landmarks in Group {groupId}</h2>
         <GroupMap data={landmarks} num={groupId} />
       </section>
       <section>

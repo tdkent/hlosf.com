@@ -17,7 +17,7 @@ export default function SingleLandmarkInfo({ landmark }: Props) {
       </div>
       <h1 className="text-center">{title}</h1>
       <div className="my-2 mx-auto py-2 border-y text-center">
-        <ul className="font-light text-sm md:text-base">
+        <ul className="text-sm md:text-base">
           <li className="my-1 italic">Group {group}</li>
           <li className="my-1">{marker_address}</li>
           <li className="flex items-center justify-center my-1 text-lg">

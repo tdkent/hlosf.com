@@ -17,8 +17,20 @@
     @apply border-border outline-foreground;
   }
 
+  body {
+    @apply font-light;
+  }
+
   h1 {
-    @apply my-6 text-xl sm:text-2xl lg:text-3xl font-medium;
+    @apply text-2xl sm:text-3xl lg:text-4xl font-medium;
+  }
+
+  h2 {
+    @apply text-xl sm:text-2xl lg:text-3xl font-medium;
+  }
+
+  p {
+    @apply my-4;
   }
 
   .link {

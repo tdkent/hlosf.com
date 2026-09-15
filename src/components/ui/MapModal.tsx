@@ -22,7 +22,7 @@ const MapModalContent = ({ data, num, setMap }: Props) => {
       role="dialog"
     >
       <div className="py-1">
-        <h2
+        <span
           id="landmark-name"
           className="px-2 flex items-center justify-center"
         >
@@ -30,7 +30,7 @@ const MapModalContent = ({ data, num, setMap }: Props) => {
           {Array.isArray(data)
             ? `Group ${num}`
             : `${data.title_stub} (${data.number})`}
-        </h2>
+        </span>
       </div>
       {Array.isArray(data) ? (
         <GroupMap data={data} num={num as number} />

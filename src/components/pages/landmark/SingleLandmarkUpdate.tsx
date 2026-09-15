@@ -12,7 +12,7 @@ export default function SingleLandmarkUpdate({ updateText }: Props) {
   };
   return (
     <>
-      <h2 className="mb-2 text-lg font-medium">Update (2020)</h2>
+      <h2>Update (2020)</h2>
       <div
         className={styles.desc}
         // biome-ignore lint/security/noDangerouslySetInnerHtml: will remove later
