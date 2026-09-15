@@ -10,16 +10,6 @@ export default function LandmarksPage() {
   const data = allLandmarksReducedData as Landmark[];
   const [sortMethod, setSortMethod] = useState<SortMethod>("number");
   const [sortedData, setSortedData] = useState<Landmark[]>([]);
-  const [windowWidth, setWindowWidth] = useState<number | null>(null);
-
-  // Get current window size
-  useEffect(() => {
-    const getWindowSize = () => {
-      const { innerWidth } = window;
-      setWindowWidth(innerWidth);
-    };
-    getWindowSize();
-  }, []);
 
   // Get sort method from session storage or set default
   useEffect(() => {
@@ -29,25 +19,16 @@ export default function LandmarksPage() {
   }, []);
 
   // Sort landmarks list
-  // biome-ignore lint/correctness/useExhaustiveDependencies: ignore window width
   useEffect(() => {
     const sortArray = (method: string) => {
       let sorted = [];
+
       if (method === "number" || method === "group") {
         sorted = [...data].sort((a, b) => a[method] - b[method]);
       } else {
-        if (windowWidth && windowWidth <= 320) {
-          sorted = [...data].sort((a, b) =>
-            a.title_stub.localeCompare(b.title_stub),
-          );
-        } else if (windowWidth && windowWidth >= 1280) {
-          sorted = [...data].sort((a, b) => a.title.localeCompare(b.title));
-        } else {
-          sorted = [...data].sort((a, b) =>
-            a.title_short.localeCompare(b.title_short),
-          );
-        }
+        sorted = [...data].sort((a, b) => a.title.localeCompare(b.title));
       }
+
       setSortedData(sorted);
     };
     sortArray(sortMethod);
