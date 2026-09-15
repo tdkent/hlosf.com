@@ -11,7 +11,6 @@ export default function LandmarksPage() {
   const [sortMethod, setSortMethod] = useState<SortMethod>("number");
   const [sortedData, setSortedData] = useState<Landmark[]>([]);
   const [windowWidth, setWindowWidth] = useState<number | null>(null);
-  const [scrollId, setScrollId] = useState<string | null>(null);
 
   // Get current window size
   useEffect(() => {
@@ -54,25 +53,14 @@ export default function LandmarksPage() {
     sortArray(sortMethod);
   }, [sortMethod]);
 
-  // Set scroll id to control scroll position of list
-  useEffect(() => {
-    const scrollPositionId = sessionStorage.getItem("scroll-position-id");
-    setScrollId(scrollPositionId);
-  }, []);
-
   return (
     <>
       <h1>Index of Landmarks</h1>
       <SortLandmarksList
         sortMethod={sortMethod}
         setSortMethod={setSortMethod}
-        setScrollId={setScrollId}
       />
-      <LandmarksList
-        sortedData={sortedData}
-        windowWidth={windowWidth}
-        scrollId={scrollId}
-      />
+      <LandmarksList sortedLandmarks={sortedData} />
     </>
   );
 }

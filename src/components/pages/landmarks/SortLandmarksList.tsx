@@ -2,20 +2,13 @@ import type { Dispatch, SetStateAction } from "react";
 import type { SortMethod } from "@/lib/types";
 
 interface Props {
-  setScrollId: Dispatch<SetStateAction<string | null>>;
   setSortMethod: Dispatch<SetStateAction<SortMethod>>;
   sortMethod: SortMethod;
 }
 
-export default function SorLandmarksList({
-  sortMethod,
-  setSortMethod,
-  setScrollId,
-}: Props) {
+export default function SorLandmarksList({ sortMethod, setSortMethod }: Props) {
   const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const sortValue = e.target.value as SortMethod;
-    sessionStorage.removeItem("scroll-position-id");
-    setScrollId(null);
     sessionStorage.setItem("lmSortMethod", sortValue);
     setSortMethod(sortValue);
   };
