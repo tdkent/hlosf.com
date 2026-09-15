@@ -19,4 +19,4 @@ export interface Landmark {
   imgUrls: string[];
 }
 
-export type SortMethod = "group" | "title_short" | "number";
+export type SortMethod = "group" | "title" | "number";

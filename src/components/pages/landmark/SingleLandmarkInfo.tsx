@@ -15,7 +15,7 @@ export default function SingleLandmarkInfo({ landmark }: Props) {
         <FaLandmark className="mr-2 fill-slate-600" />
         <p className="text-slate-600">{number}</p>
       </div>
-      <h1 className="my-4 px-2 text-xl sm:text-2xl text-center">{title}</h1>
+      <h1 className="text-center">{title}</h1>
       <div className="my-2 mx-auto py-2 border-y text-center">
         <ul className="font-light text-sm md:text-base">
           <li className="my-1 italic">Group {group}</li>

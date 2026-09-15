@@ -6,7 +6,7 @@ import { config } from "@/lib/config";
 export default function HomePage() {
   return (
     <div>
-      <div className="relative my-4 lg:my-10 mx-auto w-full aspect-3/2 z-[-1]">
+      <div className="relative lg:my-10 mx-auto w-full aspect-3/2 z-[-1]">
         <Image
           className="mx-auto shadow-sm shadow-slate-400 rounded-lg object-cover"
           src={`${config.cloudinaryUrl}/q_80${config.cloudinaryFolder}/lm841-conservatory/Conservatory-site-2_uykjmg.jpg`}
@@ -17,12 +17,12 @@ export default function HomePage() {
         />
       </div>
 
-      <details className="pl-2 pr-6 my-8">
+      <details className="my-8">
         <summary className="cursor-pointer w-fit">
           A note on the content
         </summary>
 
-        <p className="font-light mt-2 bg-background-secondary border border-border p-4">
+        <p className="font-light mt-2 bg-background-secondary border p-4">
           Much of the content on this site was created in 1976, and the text
           herein often refers to that year. This material was intended to be
           published at that time; it never was. But through the magic of the
@@ -36,10 +36,8 @@ export default function HomePage() {
         </p>
       </details>
 
-      <article className="pl-2 pr-6 font-light text-lg">
-        <h1 className="my-6 text-xl sm:text-2xl lg:text-3xl font-medium">
-          Welcome to the historic landmarks of San Francisco!
-        </h1>
+      <article className="font-light">
+        <h1>Welcome to the historic landmarks of San Francisco!</h1>
         <p className="text-lg mt-2">
           For San Francisco 1976 is a twin bicentennial, the anniversary of the
           founding of both the Nation and the City.
