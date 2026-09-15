@@ -1,15 +1,13 @@
 import Link from "next/link";
 import { FaAngleRight } from "react-icons/fa";
-import { data } from "@/data/data.json";
+import { getGroupSize } from "@/lib/guide/getGroupSize";
 
 interface Props {
   groupNum: number;
 }
 
 export default function GroupListItem({ groupNum }: Props) {
-  const groupSize = data.filter(
-    (landmark) => landmark.group === groupNum,
-  ).length;
+  const groupSize = getGroupSize(groupNum);
 
   return (
     <li key={groupNum} className="py-2.5 w-fit lg:py-4">

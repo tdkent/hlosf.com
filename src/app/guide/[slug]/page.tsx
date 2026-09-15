@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import GroupMap from "@/components/pages/group/GroupMap";
 import LandmarksListItem from "@/components/pages/landmarks/LandmarksListItem";
+import { getGroupSize } from "@/lib/guide/getGroupSize";
 import { getLandmarksByGroupId } from "@/lib/guide/getLandmarksByGroupId";
 import { validateGroupId } from "@/lib/guide/validateGroupId";
 
@@ -16,13 +17,14 @@ export default async function GuideGroupPage({
   if (!groupId) return notFound();
 
   const landmarks = getLandmarksByGroupId(groupId);
+  const groupSize = getGroupSize(groupId);
 
   return (
     <div>
       <h1>Group {groupId}</h1>
       <p>
-        Please consult the map and text below for help locating and visiting the
-        Registered Historical Landmarks in Group {groupId}.
+        Please consult the map and text below for help locating and visiting the{" "}
+        {groupSize} Registered Historical Landmarks in Group {groupId}.
       </p>
       <section>
         <h2 className="text-xl font-medium">
