@@ -32,7 +32,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Header />
         <NavBar />
         <main className="w-full flex-1">
-          <div className="my-12 px-2 w-full max-w-225 mx-auto">{children}</div>
+          <div className="my-12 px-6 w-full max-w-225 mx-auto">{children}</div>
         </main>
         <Footer />
       </body>

@@ -8,7 +8,7 @@ export default function GuidePage() {
 
   return (
     <div className="font-light">
-      <div className="pl-3 pr-5">
+      <div>
         <h1>Sightseeing Guide</h1>
         <p className="mt-2">
           By consulting the text and accompanying maps, you should have no
