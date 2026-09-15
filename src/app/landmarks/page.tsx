@@ -1,6 +1,6 @@
 import LandmarksList from "@/components/pages/landmarks/LandmarksList";
 import SortLandmarksList from "@/components/pages/landmarks/SortLandmarksList";
-import { getSortedLandmarks } from "@/lib/sortLandmarks";
+import { getSortedLandmarks } from "@/lib/landmarks/sortLandmarks";
 
 export default async function LandmarksPage({
   searchParams,

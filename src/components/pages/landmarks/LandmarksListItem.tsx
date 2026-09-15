@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { FaAngleRight } from "react-icons/fa";
+import { updateComplexLmNumber } from "@/lib/landmarks/updateComplexLmNumber";
 import type { Landmark } from "@/lib/types";
-import { updateComplexLmNumber } from "@/lib/updateComplexLmNumber";
 
 interface Props {
   landmark: Landmark;

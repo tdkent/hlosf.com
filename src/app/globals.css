@@ -20,4 +20,8 @@
   h1 {
     @apply my-6 text-xl sm:text-2xl lg:text-3xl font-medium;
   }
+
+  .link {
+    @apply hover:underline underline-offset-6 decoration-4 decoration-accent;
+  }
 }
