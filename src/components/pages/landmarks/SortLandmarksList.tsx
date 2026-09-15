@@ -16,7 +16,7 @@ export default function SortLandmarksList() {
   };
 
   return (
-    <div id="landmark-sort" className="my-8 pl-3">
+    <div id="landmark-sort" className="my-8">
       <form className="flex items-center">
         <label htmlFor="sort">Sort by:</label>
         <select

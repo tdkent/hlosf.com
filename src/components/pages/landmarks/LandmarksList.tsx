@@ -7,7 +7,7 @@ interface Props {
 
 const LandmarksList = ({ sortedLandmarks }: Props) => {
   return (
-    <ul className="grid grid-cols-1 mt-4 mx-2">
+    <ul className="grid grid-cols-1 my-4">
       {sortedLandmarks.map((landmark) => {
         return <LandmarksListItem key={landmark.id} landmark={landmark} />;
       })}
