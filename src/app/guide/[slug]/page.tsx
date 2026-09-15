@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import GroupMap from "@/components/pages/group/GroupMap";
+import LandmarksListItem from "@/components/pages/landmarks/LandmarksListItem";
 import { getLandmarksByGroupId } from "@/lib/guide/getLandmarksByGroupId";
 import { validateGroupId } from "@/lib/guide/validateGroupId";
 
@@ -20,14 +21,22 @@ export default async function GuideGroupPage({
     <div>
       <h1>Group {groupId}</h1>
       <p>
-        Consult the map and landmarks list below for help locating and visiting
-        the Registered Historical Landmarks in Group {groupId}.
+        Please consult the map and text below for help locating and visiting the
+        Registered Historical Landmarks in Group {groupId}.
       </p>
       <section>
         <h2 className="text-xl font-medium">
           Map: All Landmarks in Group {groupId}
         </h2>
         <GroupMap data={landmarks} num={groupId} />
+      </section>
+      <section>
+        <h2>Landmarks in Group {groupId}</h2>
+        <ul className="">
+          {landmarks.map((landmark) => {
+            return <LandmarksListItem key={landmark.id} landmark={landmark} />;
+          })}
+        </ul>
       </section>
     </div>
   );
