@@ -72,10 +72,7 @@ export default function HomePage() {
         </p>
         <div className="flex flex-row items-center mt-4 text-lg gap-2">
           <FaArrowCircleRight className="mr-1" />
-          <Link
-            href="/landmarks"
-            className="hover:underline underline-offset-6 decoration-4 decoration-accent"
-          >
+          <Link href="/landmarks" className="link">
             Go To Landmarks Page
           </Link>
         </div>
