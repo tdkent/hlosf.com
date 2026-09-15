@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaLandmark } from "react-icons/fa";
+import { FaAngleRight } from "react-icons/fa";
 import type { Landmark } from "@/lib/types";
 import { updateComplexLmNumber } from "@/lib/updateComplexLmNumber";
 
@@ -11,17 +11,21 @@ export default function LandmarksListItem({ landmark }: Props) {
   const { group, number, slug, title } = landmark;
 
   return (
-    <li className="flex flex-row items-center justify-between py-2 border-b first:border-t last:border-none scroll-mt-15">
+    <li className="py-2.5 border-b first:border-t lg:py-4">
       <Link href={`/landmarks/${slug}`} className="w-full">
-        <h2 className="text-sm md:text-base mb-1">{title}</h2>
-        <div className="font-light text-sm md:text-base my-1">
-          <div className="flex flex-row items-center">
-            <div className="px-1 py-0.5 flex flex-row items-center">
-              <FaLandmark className="fill-slate-600" />
-              {updateComplexLmNumber(number)}
+        <div className="flex justify-between items-center gap-4">
+          <div className="flex flex-col gap-2">
+            <h2 className="text-pretty lg:text-lg">{title}</h2>
+            <div className="font-light text-sm md:text-base">
+              <div className="flex flex-row items-center gap-6">
+                <span className="flex flex-row items-center gap-1">
+                  No. {updateComplexLmNumber(number)}
+                </span>
+                <span>Group {group}</span>
+              </div>
             </div>
-            <div className="py-0.5 px-1 mx-4 italic">Group {group}</div>
           </div>
+          <FaAngleRight className="size-5" />
         </div>
       </Link>
     </li>
