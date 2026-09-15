@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import SingleLandmark from "@/components/pages/landmark/SingleLandmark";
-import { getSingleLandmark } from "@/lib/getSingleLandmark";
+import { getSingleLandmark } from "@/lib/landmarks/getSingleLandmark";
 import type { Landmark } from "@/lib/types";
 
 export default async function LandmarkPage({
