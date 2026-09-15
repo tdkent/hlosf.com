@@ -1,44 +1,21 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import LandmarksList from "@/components/pages/landmarks/LandmarksList";
 import SortLandmarksList from "@/components/pages/landmarks/SortLandmarksList";
-import { allLandmarksReducedData } from "@/data/data";
-import type { Landmark, SortMethod } from "@/lib/types";
+import { getSortedLandmarks } from "@/lib/sortLandmarks";
 
 export default function LandmarksPage() {
-  const data = allLandmarksReducedData as Landmark[];
-  const [sortMethod, setSortMethod] = useState<SortMethod>("number");
-  const [sortedData, setSortedData] = useState<Landmark[]>([]);
+  const params = useSearchParams();
+  const sortParam = params.get("sort");
 
-  // Get sort method from session storage or set default
-  useEffect(() => {
-    const sort = sessionStorage.getItem("lmSortMethod") as SortMethod;
-    if (!sort) setSortMethod("number");
-    else setSortMethod(sort);
-  }, []);
-
-  // Sort landmarks list
-  useEffect(() => {
-    const sortArray = (method: string) => {
-      let sorted = [];
-
-      if (method === "number" || method === "group") {
-        sorted = [...data].sort((a, b) => a[method] - b[method]);
-      } else {
-        sorted = [...data].sort((a, b) => a.title.localeCompare(b.title));
-      }
-
-      setSortedData(sorted);
-    };
-    sortArray(sortMethod);
-  }, [sortMethod]);
+  const sortedLandmarks = getSortedLandmarks(sortParam);
 
   return (
     <>
       <h1>Index of Landmarks</h1>
       <SortLandmarksList />
-      <LandmarksList sortedLandmarks={sortedData} />
+      <LandmarksList sortedLandmarks={sortedLandmarks} />
     </>
   );
 }
