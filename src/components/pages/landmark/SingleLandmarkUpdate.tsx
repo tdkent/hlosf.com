@@ -1,5 +1,4 @@
 import DOMPurify from "isomorphic-dompurify";
-import styles from "@/styles/SingleLandmark.module.css";
 
 interface Props {
   updateText: string;
@@ -14,7 +13,6 @@ export default function SingleLandmarkUpdate({ updateText }: Props) {
     <>
       <h2>Update (2020)</h2>
       <div
-        className={styles.desc}
         // biome-ignore lint/security/noDangerouslySetInnerHtml: will remove later
         dangerouslySetInnerHTML={createUpdateMarkup()}
       />
