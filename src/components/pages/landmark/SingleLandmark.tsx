@@ -1,9 +1,8 @@
 import Link from "next/link";
-import SingleLandmarkDesc from "@/components/pages/landmark/SingleLandmarkDesc";
+import ParsedHtml from "@/components/pages/landmark/ParsedHtml";
 import SingleLandmarkImages from "@/components/pages/landmark/SingleLandmarkImages";
 import SingleLandmarkInfo from "@/components/pages/landmark/SingleLandmarkInfo";
 import SingleLandmarkMarker from "@/components/pages/landmark/SingleLandmarkMarker";
-import SingleLandmarkUpdate from "@/components/pages/landmark/SingleLandmarkUpdate";
 import type { Landmark } from "@/lib/types";
 
 interface Props {
@@ -29,7 +28,9 @@ export default function SingleLandmark({ landmark }: Props) {
       <header>
         <div className="flex flex-col gap-1">
           <h1>{title}</h1>
-          <h2 className="text-foreground-secondary">Landmark No. {number}</h2>
+          <p className="text-xl font-medium text-foreground-secondary sm:text-2xl lg:text-3xl">
+            Landmark No. {number}
+          </p>
         </div>
         <dl className="flex flex-col gap-4 my-8 border-y py-4">
           {dedication_year && (
@@ -55,10 +56,17 @@ export default function SingleLandmark({ landmark }: Props) {
           </div>
         </dl>
       </header>
-      {/* <SingleLandmarkInfo landmark={landmark} /> */}
-      <div className="pl-3 pr-5">
-        <SingleLandmarkDesc descText={description_html} />
-        {update_html && <SingleLandmarkUpdate updateText={update_html} />}
+      <section>
+        <h2>History & Description</h2>
+        <ParsedHtml htmlContent={description_html} />
+      </section>
+      {update_html && (
+        <section>
+          <h2>Update (2020)</h2>
+          <ParsedHtml htmlContent={update_html} />
+        </section>
+      )}
+      <div>
         <SingleLandmarkMarker
           markerText={marker_inscription_html}
           markerOnSite={marker_onsite}
