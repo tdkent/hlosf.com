@@ -67,7 +67,7 @@ export default function SingleLandmark({ landmark }: Props) {
       )}
       <section>
         <h2>Marker Inscription</h2>
-        <ParsedHtml htmlContent={marker_inscription_html} />
+        <ParsedHtml htmlContent={marker_inscription_html} styles="italic" />
         {marker_onsite === "FALSE" && (
           <div className="mb-4 py-1 px-2 border rounded-lg bg-slate-100">
             <p className="my-2 text-sm">

@@ -2,8 +2,13 @@ import parse from "html-react-parser";
 
 interface Props {
   htmlContent: string;
+  styles?: string;
 }
 
-export default function ParsedHtml({ htmlContent }: Props) {
-  return <div className="html">{parse(htmlContent)}</div>;
+export default function ParsedHtml({ htmlContent, styles }: Props) {
+  return (
+    <div className={`html${styles ? ` ${styles}` : ""}`}>
+      {parse(htmlContent)}
+    </div>
+  );
 }
