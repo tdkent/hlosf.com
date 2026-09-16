@@ -5,5 +5,5 @@ interface Props {
 }
 
 export default function ParsedHtml({ htmlContent }: Props) {
-  return <div>{parse(htmlContent)}</div>;
+  return <div className="html">{parse(htmlContent)}</div>;
 }

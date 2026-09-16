@@ -40,4 +40,13 @@
   .link {
     @apply underline-offset-6 decoration-4 decoration-accent;
   }
+
+  .html {
+    ul {
+      @apply flex flex-col gap-4 p-4;
+    }
+    li {
+      @apply list-disc;
+    }
+  }
 }
