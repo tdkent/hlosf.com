@@ -2,7 +2,6 @@ import Link from "next/link";
 import ParsedHtml from "@/components/pages/landmark/ParsedHtml";
 import SingleLandmarkImages from "@/components/pages/landmark/SingleLandmarkImages";
 import SingleLandmarkInfo from "@/components/pages/landmark/SingleLandmarkInfo";
-import SingleLandmarkMarker from "@/components/pages/landmark/SingleLandmarkMarker";
 import type { Landmark } from "@/lib/types";
 
 interface Props {
@@ -66,20 +65,28 @@ export default function SingleLandmark({ landmark }: Props) {
           <ParsedHtml htmlContent={update_html} />
         </section>
       )}
-      <div>
-        <SingleLandmarkMarker
-          markerText={marker_inscription_html}
-          markerOnSite={marker_onsite}
-          markerYear={dedication_year}
-        />
-        {imgUrls.length ? (
+      <section>
+        <h2>Marker Inscription</h2>
+        <ParsedHtml htmlContent={marker_inscription_html} />
+        {marker_onsite === "FALSE" && (
+          <div className="mb-4 py-1 px-2 border rounded-lg bg-slate-100">
+            <p className="my-2 text-sm">
+              Note: there is presently no state marker on site. Inscription
+              provided by the Office of Historic Preservation, CA State Parks.
+            </p>
+          </div>
+        )}
+      </section>
+      {imgUrls.length ? (
+        <section>
+          <h2>Images</h2>
           <SingleLandmarkImages
             imgUrls={imgUrls}
             title={title}
             lmNum={number}
           />
-        ) : null}
-      </div>
+        </section>
+      ) : null}
     </article>
   );
 }
