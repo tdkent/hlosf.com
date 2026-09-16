@@ -38,6 +38,6 @@
   }
 
   .link {
-    @apply hover:underline underline-offset-6 decoration-4 decoration-accent;
+    @apply underline-offset-6 decoration-4 decoration-accent;
   }
 }
