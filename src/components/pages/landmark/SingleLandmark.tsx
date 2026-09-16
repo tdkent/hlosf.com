@@ -24,7 +24,7 @@ export default function SingleLandmark({ landmark }: Props) {
   return (
     <article className="my-8 mx-2">
       <SingleLandmarkInfo landmark={landmark} />
-      <div className="pl-3 pr-5 font-light">
+      <div className="pl-3 pr-5">
         <SingleLandmarkDesc descText={description_html} />
         {update_html && <SingleLandmarkUpdate updateText={update_html} />}
         <SingleLandmarkMarker

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col gap-8 pt-8 pb-12 bg-background-secondary border-t font-light text-center">
+    <footer className="flex flex-col gap-8 pt-8 pb-12 bg-background-secondary border-t text-center">
       <ul className="flex flex-col gap-4">
         <li>
           <Link href="/">Home</Link>

@@ -22,7 +22,7 @@ export default function HomePage() {
           A note on the content
         </summary>
 
-        <p className="font-light mt-2 bg-background-secondary border p-4">
+        <p className="my-2 bg-background-secondary border p-4">
           Much of the content on this site was created in 1976, and the text
           herein often refers to that year. This material was intended to be
           published at that time; it never was. But through the magic of the
@@ -36,19 +36,21 @@ export default function HomePage() {
         </p>
       </details>
 
-      <article className="font-light">
-        <h1>Welcome to the historic landmarks of San Francisco!</h1>
-        <p className="text-lg mt-2">
+      <article>
+        <h1 className="text-balance">
+          Welcome to the historic landmarks of San Francisco!
+        </h1>
+        <p className="text-lg">
           For San Francisco 1976 is a twin bicentennial, the anniversary of the
           founding of both the Nation and the City.
         </p>
-        <p className="mt-2">
+        <p>
           It seems therefore particularly appropriate for residents and visitors
           alike to become more aware of the City's past. One way of reaching
           this goal is by visiting the 38 California State Registered Historical
           Landmarks to be found within San Francisco.
         </p>
-        <p className="mt-2">
+        <p>
           Anyone who has traveled in California has seen the handsome bronze
           plaques which designate State Historical Landmarks. These tablets are
           placed at sites of <q>statewide historical significance</q> which have{" "}
@@ -63,14 +65,14 @@ export default function HomePage() {
           landmark status or not. There are well over 800 such landmarks
           throughout the state, with new ones being added each year.
         </p>
-        <p className="mt-2">
+        <p>
           Not all sites have official state plaques. Some have tablets provided
           by private organizations, e.g. the Native Sons of Daughters of the
           Golden West, the California Historical Society, the Society of
           California Pioneers, the Daughters of the American Revolution, etc.,
           while other sites remain unmarked.
         </p>
-        <div className="flex flex-row items-center mt-4 text-lg gap-2">
+        <div className="flex flex-row items-center mt-8 text-lg gap-2">
           <FaArrowCircleRight className="mr-1" />
           <Link href="/landmarks" className="link">
             Go To Landmarks Page

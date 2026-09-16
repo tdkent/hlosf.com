@@ -10,7 +10,7 @@ interface Props {
 export default function Group({ data, num }: Props) {
   return (
     <div className="mt-4 pb-4 pl-3 pr-5 border-t">
-      <h3 className="text-lg font-medium mt-6">Group {num}</h3>
+      <h3 className="text-lg mt-6">Group {num}</h3>
       <div>
         <ol className="my-8 flex flex-col gap-6">
           {data

@@ -20,26 +20,26 @@ export default async function GuideGroupPage({
   const groupSize = getGroupSize(groupId);
 
   return (
-    <div>
+    <>
       <h1>Group {groupId}</h1>
       <p>
         Please consult the map and text below for help locating and visiting the{" "}
         {groupSize} Registered Historical Landmarks in Group {groupId}.
       </p>
       <section>
-        <h2 className="text-xl font-medium">
-          Map: All Landmarks in Group {groupId}
-        </h2>
-        <GroupMap data={landmarks} num={groupId} />
+        <h2>Map: All Landmarks in Group {groupId}</h2>
+        <div className="my-4">
+          <GroupMap data={landmarks} num={groupId} />
+        </div>
       </section>
       <section>
         <h2>Landmarks in Group {groupId}</h2>
-        <ul className="">
+        <ul className="my-4">
           {landmarks.map((landmark) => {
             return <LandmarksListItem key={landmark.id} landmark={landmark} />;
           })}
         </ul>
       </section>
-    </div>
+    </>
   );
 }

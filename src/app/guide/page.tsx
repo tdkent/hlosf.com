@@ -3,18 +3,18 @@ import GroupListItem from "@/components/pages/group/GroupListItem";
 export default function GuidePage() {
   const groups = Array.from({ length: 5 }, (_, idx) => idx + 1);
   return (
-    <div className="font-light">
+    <>
       <section>
         <h1>Sightseeing Guide</h1>
-        <p className="mt-2">
+        <p>
           By consulting the text and accompanying maps, you should have no
           trouble locating and visiting all of the City&#39;s 48 State
           Registered Historical Landmarks. Enjoy yourself!
         </p>
       </section>
       <section>
-        <h2 className="mb-2 text-xl font-medium">Groups</h2>
-        <p className="">
+        <h2>Groups</h2>
+        <p>
           For your convenience, the landmarks have been placed in five
           geographical groups with a suggested sequence for seeing the sites.
         </p>
@@ -24,6 +24,6 @@ export default function GuidePage() {
           })}
         </ul>
       </section>
-    </div>
+    </>
   );
 }
