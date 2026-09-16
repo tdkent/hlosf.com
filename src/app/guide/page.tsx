@@ -3,7 +3,7 @@ import GroupListItem from "@/components/pages/group/GroupListItem";
 export default function GuidePage() {
   const groups = Array.from({ length: 5 }, (_, idx) => idx + 1);
   return (
-    <div>
+    <>
       <section>
         <h1>Sightseeing Guide</h1>
         <p>
@@ -24,6 +24,6 @@ export default function GuidePage() {
           })}
         </ul>
       </section>
-    </div>
+    </>
   );
 }
