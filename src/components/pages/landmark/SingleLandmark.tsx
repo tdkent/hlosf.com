@@ -2,6 +2,7 @@ import Link from "next/link";
 import ParsedHtml from "@/components/pages/landmark/ParsedHtml";
 import SingleLandmarkImages from "@/components/pages/landmark/SingleLandmarkImages";
 import SingleLandmarkMap from "@/components/pages/landmark/SingleLandmarkMap";
+import { updateComplexLmNumber } from "@/lib/landmarks/updateComplexLmNumber";
 import type { Landmark } from "@/lib/types";
 
 interface Props {
@@ -28,7 +29,7 @@ export default function SingleLandmark({ landmark }: Props) {
         <div className="flex flex-col gap-1">
           <h1>{title}</h1>
           <p className="text-xl font-medium text-foreground-secondary sm:text-2xl lg:text-3xl">
-            Landmark No. {number}
+            Landmark No. {updateComplexLmNumber(number)}
           </p>
         </div>
         <dl className="flex flex-col gap-4 my-8 border-y py-4">
