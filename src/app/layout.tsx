@@ -27,8 +27,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${workSans.variable} ${cormorant.variable}`}>
       <body className="font-sans bg-background text-foreground h-screen flex flex-col">
-        <div id="backdrop-hook"></div>
-        <div id="modal-hook"></div>
         <Header />
         <div className="w-full flex-1">
           <NavBar />
