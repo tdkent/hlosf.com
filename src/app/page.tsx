@@ -40,7 +40,7 @@ export default function HomePage() {
         <h1 className="text-balance">
           Welcome to the historic landmarks of San Francisco!
         </h1>
-        <p className="text-lg">
+        <p>
           For San Francisco 1976 is a twin bicentennial, the anniversary of the
           founding of both the Nation and the City.
         </p>
@@ -72,7 +72,7 @@ export default function HomePage() {
           California Pioneers, the Daughters of the American Revolution, etc.,
           while other sites remain unmarked.
         </p>
-        <div className="flex flex-row items-center mt-8 text-lg gap-2">
+        <div className="flex flex-row items-center mt-8 gap-2">
           <FaArrowCircleRight className="mr-1" />
           <Link href="/landmarks" className="link hover:underline">
             Go To Landmarks Page
