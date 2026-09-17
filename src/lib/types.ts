@@ -1,8 +1,6 @@
 export interface Landmark {
   id: number;
   title: string;
-  title_short: string;
-  title_stub: string;
   number: number;
   dedication_year?: number;
   description_html: string;
@@ -15,7 +13,6 @@ export interface Landmark {
   marker_coordinates_lat: number;
   marker_coordinates_lng: number;
   slug: string;
-  description_meta: string;
   imgUrls: string[];
 }
 
