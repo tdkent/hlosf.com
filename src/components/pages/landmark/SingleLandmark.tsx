@@ -69,7 +69,7 @@ export default function SingleLandmark({ landmark }: Props) {
       <section>
         <h2>Marker Inscription</h2>
         <ParsedHtml htmlContent={markerText} styles="italic" />
-        {hasMarker === "FALSE" && (
+        {!hasMarker && (
           <p className="my-2 bg-background-secondary border p-4">
             Note: there is presently no state marker on site. Inscription
             provided by the Office of Historic Preservation, CA State Parks.

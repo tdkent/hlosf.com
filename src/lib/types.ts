@@ -7,7 +7,7 @@ export interface Landmark {
   update_html?: string;
   group: number;
   groupOrder: number;
-  hasMarker: string;
+  hasMarker: boolean;
   markerText: string;
   address: string;
   lat: number;
