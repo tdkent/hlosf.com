@@ -20,3 +20,8 @@ export interface Landmark {
 }
 
 export type SortMethod = "group" | "title" | "number";
+
+export interface NavLink {
+  label: string;
+  href: string;
+}

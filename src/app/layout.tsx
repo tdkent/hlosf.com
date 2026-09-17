@@ -30,10 +30,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <div id="backdrop-hook"></div>
         <div id="modal-hook"></div>
         <Header />
-        <NavBar />
-        <main className="w-full flex-1">
-          <div className="my-12 px-6 w-full max-w-225 mx-auto">{children}</div>
-        </main>
+        <div className="w-full flex-1">
+          <NavBar />
+          <main className="my-12 px-6 w-full max-w-225 mx-auto">
+            {children}
+          </main>
+        </div>
         <Footer />
       </body>
     </html>

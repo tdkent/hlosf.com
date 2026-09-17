@@ -1,18 +1,19 @@
 import Link from "next/link";
+import { navLinks } from "@/lib/nav";
 
 export default function NavBar() {
   return (
     <nav className="sticky top-0 bg-background-secondary opacity-95 border-y select-none">
-      <ul className="w-full my-3 flex flex-row items-center md:text-lg">
-        <li className="w-1/3 text-left pl-4 md:pl-8 xl:text-center">
-          <Link href="/">Home</Link>
-        </li>
-        <li className="w-1/3 text-center">
-          <Link href="/landmarks">Landmarks</Link>
-        </li>
-        <li className="w-1/3 text-right xl:text-center pr-4 md:pr-8">
-          <Link href="/guide">Guide</Link>
-        </li>
+      <ul className="flex flex-row items-center justify-between max-w-225 mx-auto py-2.5 px-6 md:py-3 lg:py-4 lg:text-lg">
+        {navLinks.map(({ label, href }) => {
+          return (
+            <li key={label} className="">
+              <Link href={href} className="link hover:underline">
+                {label}
+              </Link>
+            </li>
+          );
+        })}
       </ul>
     </nav>
   );
