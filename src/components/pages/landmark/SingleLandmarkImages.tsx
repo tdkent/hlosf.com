@@ -13,7 +13,6 @@ const SingleLandmarkImages = ({ imgUrls, title, lmNum }: Props) => {
   const { cloudinaryFolder, cloudinaryUrl } = config;
   return (
     <div>
-      <h2>Images</h2>
       {imgUrls.map((url) => {
         return (
           <div key={url.split("hlsf")[1]}>
