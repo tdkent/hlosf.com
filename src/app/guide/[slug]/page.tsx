@@ -25,6 +25,7 @@ export default async function GuideGroupPage({
       <p>
         Please consult the map and text below for help locating and visiting the{" "}
         {groupSize} Registered Historical Landmarks in Group {groupId}.
+        Landmarks are listed in a suggested sequence for seeing the sites.
       </p>
       <section>
         <h2>Map</h2>
