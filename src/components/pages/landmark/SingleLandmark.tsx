@@ -1,7 +1,7 @@
 import Link from "next/link";
 import ParsedHtml from "@/components/pages/landmark/ParsedHtml";
 import SingleLandmarkImages from "@/components/pages/landmark/SingleLandmarkImages";
-import SingleLandmarkInfo from "@/components/pages/landmark/SingleLandmarkInfo";
+import SingleLandmarkMap from "@/components/pages/landmark/SingleLandmarkMap";
 import type { Landmark } from "@/lib/types";
 
 interface Props {
@@ -76,6 +76,12 @@ export default function SingleLandmark({ landmark }: Props) {
             </p>
           </div>
         )}
+      </section>
+      <section>
+        <h2>Map</h2>
+        <div className="my-4">
+          <SingleLandmarkMap data={landmark} />
+        </div>
       </section>
       {imgUrls.length ? (
         <section>
