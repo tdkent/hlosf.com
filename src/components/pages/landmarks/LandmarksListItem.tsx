@@ -8,14 +8,14 @@ interface Props {
 }
 
 export default function LandmarksListItem({ landmark }: Props) {
-  const { group, number, slug, title } = landmark;
+  const { group, number, slug, name } = landmark;
 
   return (
     <li className="py-2.5 border-b first:border-t lg:py-4">
       <Link href={`/landmarks/${slug}`} className="w-full">
         <div className="flex justify-between items-center gap-6 px-2 lg:px-4">
           <div className="flex flex-col gap-2">
-            <span className="text-pretty font-medium">{title}</span>
+            <span className="text-pretty font-medium">{name}</span>
             <div className="flex flex-row items-center gap-6 text-foreground-secondary">
               <span className="flex flex-row items-center gap-1">
                 No. {updateComplexLmNumber(number)}

@@ -11,14 +11,14 @@ interface Props {
 
 export default function SingleLandmark({ landmark }: Props) {
   const {
-    description_html,
+    description,
     group,
-    marker_address,
-    marker_inscription_html,
-    marker_onsite,
-    dedication_year,
+    address,
+    markerText,
+    hasMarker,
+    dedicationYear,
     imgUrls,
-    title,
+    name,
     number,
     update_html,
   } = landmark;
@@ -27,21 +27,21 @@ export default function SingleLandmark({ landmark }: Props) {
     <article>
       <header>
         <div className="flex flex-col gap-1">
-          <h1>{title}</h1>
+          <h1>{name}</h1>
           <p className="text-xl font-medium text-foreground-secondary sm:text-2xl lg:text-3xl">
             Landmark No. {updateComplexLmNumber(number)}
           </p>
         </div>
         <dl className="flex flex-col gap-4 my-8 border-y py-4">
-          {dedication_year && (
+          {dedicationYear && (
             <div>
               <dt className="uppercase text-sm">Year Dedicated</dt>
-              <dd className="font-light">{dedication_year}</dd>
+              <dd className="font-light">{dedicationYear}</dd>
             </div>
           )}
           <div>
             <dt className="uppercase text-sm">Location</dt>
-            <dd>{marker_address}</dd>
+            <dd>{address}</dd>
           </div>
           <div>
             <dt className="uppercase text-sm">Sightseeing Group</dt>
@@ -58,7 +58,7 @@ export default function SingleLandmark({ landmark }: Props) {
       </header>
       <section>
         <h2>History & Description</h2>
-        <ParsedHtml htmlContent={description_html} />
+        <ParsedHtml htmlContent={description} />
       </section>
       {update_html && (
         <section>
@@ -68,8 +68,8 @@ export default function SingleLandmark({ landmark }: Props) {
       )}
       <section>
         <h2>Marker Inscription</h2>
-        <ParsedHtml htmlContent={marker_inscription_html} styles="italic" />
-        {marker_onsite === "FALSE" && (
+        <ParsedHtml htmlContent={markerText} styles="italic" />
+        {hasMarker === "FALSE" && (
           <p className="my-2 bg-background-secondary border p-4">
             Note: there is presently no state marker on site. Inscription
             provided by the Office of Historic Preservation, CA State Parks.
@@ -85,11 +85,7 @@ export default function SingleLandmark({ landmark }: Props) {
       {imgUrls.length ? (
         <section>
           <h2>Images</h2>
-          <SingleLandmarkImages
-            imgUrls={imgUrls}
-            title={title}
-            lmNum={number}
-          />
+          <SingleLandmarkImages imgUrls={imgUrls} name={name} lmNum={number} />
         </section>
       ) : null}
     </article>

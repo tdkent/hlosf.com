@@ -6,10 +6,10 @@ import { config } from "@/lib/config";
 interface Props {
   imgUrls: string[];
   lmNum: number;
-  title: string;
+  name: string;
 }
 
-const SingleLandmarkImages = ({ imgUrls, title, lmNum }: Props) => {
+const SingleLandmarkImages = ({ imgUrls, name, lmNum }: Props) => {
   const { cloudinaryFolder, cloudinaryUrl } = config;
   return (
     <div>
@@ -26,7 +26,7 @@ const SingleLandmarkImages = ({ imgUrls, title, lmNum }: Props) => {
                 src={`${cloudinaryUrl}/q_70${cloudinaryFolder}${
                   url.split("hlsf")[1]
                 }`}
-                alt={title}
+                alt={name}
                 width={990}
                 height={660}
               />
