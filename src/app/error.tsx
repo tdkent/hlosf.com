@@ -3,7 +3,7 @@
 export default function UnexpectedError({ retry }: { retry: () => void }) {
   return (
     <div className="text-center mt-6">
-      <p className="text-foreground-secondary text-lg lg:text-xl">
+      <p className="text-foreground-secondary lg:text-xl">
         An unexpected error occurred.
       </p>
       <p>Please click below to try again.</p>
