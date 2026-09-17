@@ -69,12 +69,10 @@ export default function SingleLandmark({ landmark }: Props) {
         <h2>Marker Inscription</h2>
         <ParsedHtml htmlContent={marker_inscription_html} styles="italic" />
         {marker_onsite === "FALSE" && (
-          <div className="mb-4 py-1 px-2 border rounded-lg bg-slate-100">
-            <p className="my-2 text-sm">
-              Note: there is presently no state marker on site. Inscription
-              provided by the Office of Historic Preservation, CA State Parks.
-            </p>
-          </div>
+          <p className="my-2 bg-background-secondary border p-4">
+            Note: there is presently no state marker on site. Inscription
+            provided by the Office of Historic Preservation, CA State Parks.
+          </p>
         )}
       </section>
       <section>

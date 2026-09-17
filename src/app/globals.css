@@ -43,7 +43,7 @@
 
   .html {
     ul {
-      @apply flex flex-col gap-4 p-4;
+      @apply flex flex-col gap-4 p-4 lg:px-8;
     }
     li {
       @apply list-disc;
