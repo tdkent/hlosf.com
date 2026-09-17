@@ -6,7 +6,7 @@ import { config } from "@/lib/config";
 export default function HomePage() {
   return (
     <div>
-      <div className="relative lg:my-10 mx-auto w-full aspect-3/2 z-[-1]">
+      <div className="relative lg:my-10 mx-auto w-full aspect-3/2">
         <Image
           className="mx-auto shadow-sm shadow-slate-400 rounded-lg object-cover"
           src={`${config.cloudinaryUrl}/q_80${config.cloudinaryFolder}/lm841-conservatory/Conservatory-site-2_uykjmg.jpg`}
