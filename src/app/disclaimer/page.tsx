@@ -21,6 +21,12 @@ export default function Disclaimer() {
           from visitors. There are no user accounts, login systems, comment
           systems, forms, or other features that request personal data.
         </p>
+        <p>
+          The site provides an interactive feature to record landmarks the user
+          has visited. Landmark data is stored in the user's browser strictly
+          for the purpose of tracking visited landmarks, and does not include
+          personal information.
+        </p>
         <h2>Technical Data and Server Logs</h2>
         <p>
           Like most websites, basic technical information may be logged
