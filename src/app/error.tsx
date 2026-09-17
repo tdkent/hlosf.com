@@ -2,13 +2,18 @@
 
 export default function UnexpectedError({ retry }: { retry: () => void }) {
   return (
-    <div className="w-full mx-auto my-12 px-2 max-w-225">
-      <div className="my-8 mx-2">
-        <h2>Something went wrong!</h2>
-        <button onClick={() => retry()} type="button">
-          Try again
-        </button>
-      </div>
+    <div className="text-center mt-6">
+      <p className="text-foreground-secondary text-lg lg:text-xl">
+        An unexpected error occurred.
+      </p>
+      <p>Please click below to try again.</p>
+      <button
+        onClick={() => retry()}
+        type="button"
+        className="border rounded-lg px-4 py-2.5 bg-foreground-secondary text-background my-4"
+      >
+        Try again
+      </button>
     </div>
   );
 }

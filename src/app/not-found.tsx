@@ -1,8 +1,12 @@
 export default function NotFound() {
   return (
     <div className="text-center mt-6">
-      <p className="text-4xl">404</p>
-      <p>This page doesn't exist.</p>
+      <p className="text-5xl text-foreground-secondary font-medium lg:text-6xl">
+        404
+      </p>
+      <p className="text-foreground-secondary text-lg lg:text-xl">
+        Sorry, this page doesn't exist!
+      </p>
     </div>
   );
 }
