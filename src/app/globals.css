@@ -50,4 +50,8 @@
       @apply list-disc;
     }
   }
+
+  .map {
+    @apply h-100 md:h-125;
+  }
 }

@@ -3,7 +3,6 @@
 import { Loader } from "@googlemaps/js-api-loader";
 import { useEffect, useRef } from "react";
 import type { Landmark } from "@/lib/types";
-import styles from "@/styles/SingleLandmarkMap.module.css";
 
 interface Props {
   data: Landmark;
@@ -66,5 +65,5 @@ export default function SingleLandmarkMap({ data }: Props) {
     number,
     group,
   ]);
-  return <div className={`${styles.map}`} ref={mapRef} />;
+  return <div className="map" ref={mapRef} />;
 }
