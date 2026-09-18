@@ -3,21 +3,13 @@
 import { Loader } from "@googlemaps/js-api-loader";
 import { useEffect, useRef } from "react";
 import type { Landmark } from "@/lib/types";
-import styles from "@/styles/SingleLandmarkMap.module.css";
 
 interface Props {
   data: Landmark;
 }
 
 export default function SingleLandmarkMap({ data }: Props) {
-  const {
-    marker_coordinates_lat,
-    marker_coordinates_lng,
-    marker_address,
-    title,
-    number,
-    group,
-  } = data;
+  const { lat, lng, address, name, number, group } = data;
 
   const mapRef = useRef<HTMLDivElement | null>(null);
 
@@ -28,8 +20,8 @@ export default function SingleLandmarkMap({ data }: Props) {
     });
 
     const center = {
-      lat: marker_coordinates_lat,
-      lng: marker_coordinates_lng,
+      lat: lat,
+      lng: lng,
     };
 
     let map: google.maps.Map;
@@ -43,13 +35,13 @@ export default function SingleLandmarkMap({ data }: Props) {
       });
 
       const infoWindow = new google.maps.InfoWindow({
-        content: `<div style="padding:0 3px 6px 3px"><p>${title}</p><p style="padding: 4px 0">Number: ${number}, Group: ${group}</p><p>Address: ${marker_address}</div>`,
-        ariaLabel: title,
+        content: `<div style="padding:0 3px 6px 3px"><p>${name}</p><p style="padding: 4px 0">Number: ${number}, Group: ${group}</p><p>Address: ${address}</div>`,
+        ariaLabel: name,
       });
       const marker = new google.maps.Marker({
         position: center,
         map,
-        title,
+        name,
       });
       marker.addListener("click", () => {
         infoWindow.open({
@@ -58,13 +50,6 @@ export default function SingleLandmarkMap({ data }: Props) {
         });
       });
     });
-  }, [
-    marker_coordinates_lat,
-    marker_coordinates_lng,
-    marker_address,
-    title,
-    number,
-    group,
-  ]);
-  return <div className={`${styles.map}`} ref={mapRef} />;
+  }, [lat, lng, address, name, number, group]);
+  return <div className="map" ref={mapRef} />;
 }

@@ -3,7 +3,6 @@
 import { Loader } from "@googlemaps/js-api-loader";
 import { useEffect, useRef } from "react";
 import type { Landmark } from "@/lib/types";
-import styles from "@/styles/GroupMap.module.css";
 
 interface Props {
   data: Landmark[];
@@ -31,17 +30,17 @@ export default function GroupMap({ data, num }: Props) {
       data.forEach((lm) => {
         if (lm.group === num) {
           const infoWindow = new google.maps.InfoWindow({
-            content: `<div style="padding:0 3px 6px 3px"><p>${lm.title}</p><p style="padding: 4px 0">Number: ${lm.number}, Group: ${lm.group}</p><p>Address: ${lm.marker_address}</div>`,
-            ariaLabel: lm.title,
+            content: `<div style="padding:0 3px 6px 3px"><p>${lm.name}</p><p style="padding: 4px 0">Number: ${lm.number}, Group: ${lm.group}</p><p>Address: ${lm.address}</div>`,
+            ariaLabel: lm.name,
           });
           const position = {
-            lat: lm.marker_coordinates_lat,
-            lng: lm.marker_coordinates_lng,
+            lat: lm.lat,
+            lng: lm.lng,
           };
           const marker = new google.maps.Marker({
             position,
             map,
-            title: lm.title,
+            title: lm.name,
             label: lm.group.toString(),
           });
           markersArr.push(marker);
@@ -67,5 +66,5 @@ export default function GroupMap({ data, num }: Props) {
       });
     });
   });
-  return <div className={styles.map} ref={mapRef} />;
+  return <div className="map" ref={mapRef} />;
 }

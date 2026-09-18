@@ -6,8 +6,8 @@ export function getSortedLandmarks(sortMethod: string | undefined) {
       return [...data].sort((a, b) => a.group - b.group);
     }
 
-    case "title": {
-      return [...data].sort((a, b) => a.title.localeCompare(b.title));
+    case "name": {
+      return [...data].sort((a, b) => a.name.localeCompare(b.name));
     }
 
     default: {

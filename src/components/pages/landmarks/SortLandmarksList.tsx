@@ -26,7 +26,7 @@ export default function SortLandmarksList() {
           onChange={handleSelectChange}
         >
           <option value="number">Number</option>
-          <option value="title">Name</option>
+          <option value="name">Name</option>
           <option value="group">Group</option>
         </select>
       </form>
