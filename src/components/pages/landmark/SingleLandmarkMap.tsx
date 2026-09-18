@@ -10,7 +10,7 @@ interface Props {
 }
 
 export default function SingleLandmarkMap({ data }: Props) {
-  const { lat, lng, address, name, number, group } = data;
+  const { lat, lng } = data;
 
   return (
     <div className="map">
@@ -22,7 +22,7 @@ export default function SingleLandmarkMap({ data }: Props) {
           gestureHandling="greedy"
           mapId={config.LANDMARK_MAP_ID}
         >
-          <MarkerWithInfoWindow position={{ lat, lng }} />
+          <MarkerWithInfoWindow {...data} />
         </GoogleMap>
       </APIProvider>
     </div>

@@ -6,16 +6,23 @@ import {
 import { useCallback, useState } from "react";
 
 interface Props {
-  position: {
-    lat: number;
-    lng: number;
-  };
+  address: string;
+  lat: number;
+  lng: number;
+  name: string;
+  number: number;
 }
 
 // Component adapted from react-google-maps docs:
 // https://visgl.github.io/react-google-maps/docs/api-reference/components/info-window#infowindow-attached-to-marker
 
-export default function MarkerWithInfoWindow({ position }: Props) {
+export default function MarkerWithInfoWindow({
+  address,
+  lat,
+  lng,
+  name,
+  number,
+}: Props) {
   const [markerRef, marker] = useAdvancedMarkerRef();
 
   const [infoWindowShown, setInfoWindowShown] = useState(false);
@@ -33,14 +40,17 @@ export default function MarkerWithInfoWindow({ position }: Props) {
     <>
       <AdvancedMarker
         ref={markerRef}
-        position={position}
+        position={{ lat, lng }}
         onClick={handleMarkerClick}
       />
 
       {infoWindowShown && (
         <InfoWindow anchor={marker} onClose={handleClose}>
-          <h2>InfoWindow content!</h2>
-          <p>Some arbitrary html to be rendered into the InfoWindow.</p>
+          <div className="font-sans">
+            <h3 className="font-medium text-sm">{name}</h3>
+            <p>Landmark No. {number}</p>
+            <p>{address}</p>
+          </div>
         </InfoWindow>
       )}
     </>
