@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import GroupMap from "@/components/pages/group/GroupMap";
 import LandmarksListItem from "@/components/pages/landmarks/LandmarksListItem";
@@ -9,7 +10,7 @@ export async function generateMetadata({
   params,
 }: {
   params: Promise<{ slug: string }>;
-}) {
+}): Promise<Metadata> {
   const { slug } = await params;
   const groupId = validateGroupId(slug);
 
@@ -21,9 +22,18 @@ export async function generateMetadata({
 
   const groupSize = getGroupSize(groupId);
 
+  const title = `Sightseeing Group ${groupId} | Historic Landmarks of San Francisco`;
+  const description = `Locate and visit the ${groupSize} California Historical Landmarks in Group ${groupId} of our suggested sightseeing guide.`;
+
   return {
-    title: `Sightseeing Group ${groupId} | Historic Landmarks of San Francisco`,
-    description: `Locate and visit the ${groupSize} California Historical Landmarks in Group ${groupId} of our suggested sightseeing guide.`,
+    title,
+    description,
+    openGraph: {
+      description,
+      title,
+      type: "website",
+      url: `https://www.hlosf.com/guide/group-${groupId}`,
+    },
   };
 }
 
