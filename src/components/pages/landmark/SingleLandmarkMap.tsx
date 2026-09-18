@@ -19,6 +19,7 @@ export default function SingleLandmarkMap({ data }: Props) {
           defaultZoom={18}
           disableDefaultUI
           gestureHandling="greedy"
+          mapId={config.LANDMARK_MAP_ID}
         />
       </APIProvider>
     </div>
