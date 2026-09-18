@@ -1,6 +1,6 @@
 "use client";
 
-import { APIProvider, Map } from "@vis.gl/react-google-maps";
+import { APIProvider, Map as GoogleMap } from "@vis.gl/react-google-maps";
 import { config } from "@/lib/config";
 import type { Landmark } from "@/lib/types";
 
@@ -14,7 +14,7 @@ export default function SingleLandmarkMap({ data }: Props) {
   return (
     <div className="map">
       <APIProvider apiKey={config.GOOGLE_MAPS_API_KEY}>
-        <Map
+        <GoogleMap
           defaultCenter={{ lat, lng }}
           defaultZoom={18}
           disableDefaultUI
