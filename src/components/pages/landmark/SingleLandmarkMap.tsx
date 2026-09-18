@@ -1,6 +1,10 @@
 "use client";
 
-import { APIProvider, Map as GoogleMap } from "@vis.gl/react-google-maps";
+import {
+  AdvancedMarker,
+  APIProvider,
+  Map as GoogleMap,
+} from "@vis.gl/react-google-maps";
 import { config } from "@/lib/config";
 import type { Landmark } from "@/lib/types";
 
@@ -20,7 +24,9 @@ export default function SingleLandmarkMap({ data }: Props) {
           disableDefaultUI
           gestureHandling="greedy"
           mapId={config.LANDMARK_MAP_ID}
-        />
+        >
+          <AdvancedMarker position={{ lat, lng }} />
+        </GoogleMap>
       </APIProvider>
     </div>
   );
