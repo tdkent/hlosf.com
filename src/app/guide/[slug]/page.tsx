@@ -1,9 +1,43 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import GroupMap from "@/components/pages/group/GroupMap";
 import LandmarksListItem from "@/components/pages/landmarks/LandmarksListItem";
 import { getGroupSize } from "@/lib/guide/getGroupSize";
 import { getLandmarksByGroupId } from "@/lib/guide/getLandmarksByGroupId";
 import { validateGroupId } from "@/lib/guide/validateGroupId";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const groupId = validateGroupId(slug);
+
+  if (!groupId) {
+    return {
+      title: "Page Not Found",
+    };
+  }
+
+  const groupSize = getGroupSize(groupId);
+
+  const title = `Sightseeing Group ${groupId}`;
+  const description = `Locate and visit the ${groupSize} California Historical Landmarks in Group ${groupId} of our suggested sightseeing guide.`;
+
+  return {
+    title,
+    description,
+    openGraph: {
+      description,
+      title,
+      url: `https://www.hlosf.com/guide/group-${groupId}`,
+    },
+    alternates: {
+      canonical: `/guide/group-${groupId}`,
+    },
+  };
+}
 
 export default async function GuideGroupPage({
   params,
@@ -24,8 +58,9 @@ export default async function GuideGroupPage({
       <h1>Group {groupId}</h1>
       <p>
         Please consult the map and text below for help locating and visiting the{" "}
-        {groupSize} Registered Historical Landmarks in Group {groupId}.
-        Landmarks are listed in a suggested sequence for seeing the sites.
+        {groupSize} registered California Historical Landmarks in Group{" "}
+        {groupId}. Landmarks are listed in a suggested sequence for seeing the
+        sites.
       </p>
       <section>
         <h2>Map</h2>

@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Page Not Found | Historic Landmarks of San Francisco",
+};
+
 export default function NotFound() {
   return (
     <div className="text-center mt-6">

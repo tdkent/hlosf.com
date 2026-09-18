@@ -1,4 +1,22 @@
+import type { Metadata } from "next";
 import GroupListItem from "@/components/pages/group/GroupListItem";
+
+const title = "Sightseeing Guide";
+const description =
+  "Our sightseeing guide to the registered California Historical Landmarks located in San Francisco.";
+
+export const metadata: Metadata = {
+  title,
+  description,
+  openGraph: {
+    description,
+    title,
+    url: "https://www.hlosf.com/guide",
+  },
+  alternates: {
+    canonical: "/guide",
+  },
+};
 
 export default function GuidePage() {
   const groups = Array.from({ length: 5 }, (_, idx) => idx + 1);
@@ -8,8 +26,8 @@ export default function GuidePage() {
         <h1>Sightseeing Guide</h1>
         <p>
           By consulting the text and accompanying maps, you should have no
-          trouble locating and visiting all of the City&#39;s 48 State
-          Registered Historical Landmarks. Enjoy yourself!
+          trouble locating and visiting all of the City's 48 California
+          Historical Landmarks. Enjoy yourself!
         </p>
       </section>
       <section>

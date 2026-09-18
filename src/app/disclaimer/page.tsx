@@ -1,3 +1,12 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy & Terms",
+  alternates: {
+    canonical: "/disclaimer",
+  },
+};
+
 export default function Disclaimer() {
   return (
     <div>

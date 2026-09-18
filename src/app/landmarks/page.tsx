@@ -1,6 +1,22 @@
+import type { Metadata } from "next";
 import LandmarksList from "@/components/pages/landmarks/LandmarksList";
 import SortLandmarksList from "@/components/pages/landmarks/SortLandmarksList";
 import { getSortedLandmarks } from "@/lib/landmarks/sortLandmarks";
+
+const title = "Index of Landmarks";
+
+export const metadata: Metadata = {
+  title,
+  openGraph: {
+    description:
+      "A guide to the 48 officially designated historical landmarks of California that are located in the city and county of San Francisco, including Union Square, Mission Dolores, and the Presidio.",
+    title,
+    url: "https://www.hlosf.com/landmarks",
+  },
+  alternates: {
+    canonical: "/landmarks",
+  },
+};
 
 export default async function LandmarksPage({
   searchParams,

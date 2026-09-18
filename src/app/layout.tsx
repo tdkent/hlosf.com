@@ -18,9 +18,13 @@ const workSans = Work_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Historic Landmarks of San Francisco",
+  title: {
+    default: "Historic Landmarks of San Francisco",
+    template: "%s | Historic Landmarks of San Francisco",
+  },
   description:
     "A guide to the 48 officially designated historical landmarks of California that are located in the city and county of San Francisco, including Union Square, Mission Dolores, and the Presidio.",
+  metadataBase: new URL("https://www.hlosf.com"),
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

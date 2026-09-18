@@ -1,7 +1,24 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowCircleRight } from "react-icons/fa";
 import { config } from "@/lib/config";
+
+const title = "Explore SF history | Historic Landmarks of San Francisco";
+
+export const metadata: Metadata = {
+  title,
+  openGraph: {
+    description:
+      "A guide to the 48 officially designated historical landmarks of California that are located in the city and county of San Francisco, including Union Square, Mission Dolores, and the Presidio.",
+    title,
+    type: "website",
+    url: "https://www.hlosf.com",
+  },
+  alternates: {
+    canonical: "/",
+  },
+};
 
 export default function HomePage() {
   return (
@@ -47,7 +64,7 @@ export default function HomePage() {
         <p>
           It seems therefore particularly appropriate for residents and visitors
           alike to become more aware of the City's past. One way of reaching
-          this goal is by visiting the 38 California State Registered Historical
+          this goal is by visiting the 48 registered California Historical
           Landmarks to be found within San Francisco.
         </p>
         <p>
