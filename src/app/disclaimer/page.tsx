@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy & Terms | Historic Landmarks of San Francisco",
+};
+
 export default function Disclaimer() {
   return (
     <div>

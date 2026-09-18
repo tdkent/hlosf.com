@@ -1,4 +1,9 @@
+import type { Metadata } from "next";
 import GroupListItem from "@/components/pages/group/GroupListItem";
+
+export const metadata: Metadata = {
+  title: "Sightseeing Guide | Historic Landmarks of San Francisco",
+};
 
 export default function GuidePage() {
   const groups = Array.from({ length: 5 }, (_, idx) => idx + 1);
