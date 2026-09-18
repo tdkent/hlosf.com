@@ -1,8 +1,19 @@
 import type { Metadata } from "next";
 import GroupListItem from "@/components/pages/group/GroupListItem";
 
+const title = "Sightseeing Guide | Historic Landmarks of San Francisco";
+const description =
+  "Our sightseeing guide to the registered California Historical Landmarks located in San Francisco.";
+
 export const metadata: Metadata = {
-  title: "Sightseeing Guide | Historic Landmarks of San Francisco",
+  title,
+  description,
+  openGraph: {
+    description,
+    title,
+    url: "https://www.hlosf.com/guide",
+    type: "website",
+  },
 };
 
 export default function GuidePage() {

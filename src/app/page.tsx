@@ -4,8 +4,17 @@ import Link from "next/link";
 import { FaArrowCircleRight } from "react-icons/fa";
 import { config } from "@/lib/config";
 
+const title = "Explore SF history | Historic Landmarks of San Francisco";
+
 export const metadata: Metadata = {
-  title: "Explore SF history | Historic Landmarks of San Francisco",
+  title,
+  openGraph: {
+    description:
+      "A guide to the 48 officially designated historical landmarks of California that are located in the city and county of San Francisco, including Union Square, Mission Dolores, and the Presidio.",
+    title,
+    type: "website",
+    url: "https://www.hlosf.com",
+  },
 };
 
 export default function HomePage() {
