@@ -13,6 +13,9 @@ export const metadata: Metadata = {
     title,
     url: "https://www.hlosf.com/guide",
   },
+  alternates: {
+    canonical: "/guide",
+  },
 };
 
 export default function GuidePage() {

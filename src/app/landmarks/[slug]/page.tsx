@@ -33,6 +33,9 @@ export async function generateMetadata({
       type: "article",
       url: `https://www.hlosf.com/landmarks/${slug}`,
     },
+    alternates: {
+      canonical: `/landmarks/${slug}`,
+    },
   };
 }
 

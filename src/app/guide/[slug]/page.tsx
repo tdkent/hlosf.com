@@ -33,6 +33,9 @@ export async function generateMetadata({
       title,
       url: `https://www.hlosf.com/guide/group-${groupId}`,
     },
+    alternates: {
+      canonical: `/guide/group-${groupId}`,
+    },
   };
 }
 

@@ -24,6 +24,7 @@ export const metadata: Metadata = {
   },
   description:
     "A guide to the 48 officially designated historical landmarks of California that are located in the city and county of San Francisco, including Union Square, Mission Dolores, and the Presidio.",
+  metadataBase: new URL("https://www.hlosf.com"),
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -13,6 +13,9 @@ export const metadata: Metadata = {
     title,
     url: "https://www.hlosf.com/landmarks",
   },
+  alternates: {
+    canonical: "/landmarks",
+  },
 };
 
 export default async function LandmarksPage({

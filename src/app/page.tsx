@@ -15,6 +15,9 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://www.hlosf.com",
   },
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default function HomePage() {
