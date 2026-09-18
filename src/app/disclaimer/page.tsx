@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy & Terms | Historic Landmarks of San Francisco",
+  title: "Privacy & Terms",
 };
 
 export default function Disclaimer() {

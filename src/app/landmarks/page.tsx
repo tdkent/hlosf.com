@@ -3,7 +3,7 @@ import LandmarksList from "@/components/pages/landmarks/LandmarksList";
 import SortLandmarksList from "@/components/pages/landmarks/SortLandmarksList";
 import { getSortedLandmarks } from "@/lib/landmarks/sortLandmarks";
 
-const title = "Index of Landmarks | Historic Landmarks of San Francisco";
+const title = "Index of Landmarks";
 
 export const metadata: Metadata = {
   title,
@@ -11,7 +11,6 @@ export const metadata: Metadata = {
     description:
       "A guide to the 48 officially designated historical landmarks of California that are located in the city and county of San Francisco, including Union Square, Mission Dolores, and the Presidio.",
     title,
-    type: "website",
     url: "https://www.hlosf.com/landmarks",
   },
 };

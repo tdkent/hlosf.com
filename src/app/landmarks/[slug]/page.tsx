@@ -15,13 +15,13 @@ export async function generateMetadata({
 
   if (!landmark) {
     return {
-      title: "Page Not Found | Historic Landmarks of San Francisco",
+      title: "Page Not Found",
     };
   }
 
   const { address, name, number } = landmark;
 
-  const title = `${name} | Historic Landmarks of San Francisco`;
+  const title = `${name}`;
   const description = `History, description, map, and images of ${name}, California Historical Landmark No. ${updateComplexLmNumber(number)}, located at ${address}.`;
 
   return {
@@ -30,7 +30,7 @@ export async function generateMetadata({
     openGraph: {
       description,
       title,
-      type: "website",
+      type: "article",
       url: `https://www.hlosf.com/landmarks/${slug}`,
     },
   };

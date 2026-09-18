@@ -16,13 +16,13 @@ export async function generateMetadata({
 
   if (!groupId) {
     return {
-      title: "Page Not Found | Historic Landmarks of San Francisco",
+      title: "Page Not Found",
     };
   }
 
   const groupSize = getGroupSize(groupId);
 
-  const title = `Sightseeing Group ${groupId} | Historic Landmarks of San Francisco`;
+  const title = `Sightseeing Group ${groupId}`;
   const description = `Locate and visit the ${groupSize} California Historical Landmarks in Group ${groupId} of our suggested sightseeing guide.`;
 
   return {
@@ -31,7 +31,6 @@ export async function generateMetadata({
     openGraph: {
       description,
       title,
-      type: "website",
       url: `https://www.hlosf.com/guide/group-${groupId}`,
     },
   };
