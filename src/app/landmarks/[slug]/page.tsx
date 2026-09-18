@@ -22,7 +22,7 @@ export async function generateMetadata({
 
   return {
     title: `${name} | Historic Landmarks of San Francisco`,
-    description: `History, description, map, and images of ${name}, California Registered Historic Landmark No. ${updateComplexLmNumber(number)}, located at ${address}.`,
+    description: `History, description, map, and images of ${name}, California Historical Landmark No. ${updateComplexLmNumber(number)}, located at ${address}.`,
   };
 }
 

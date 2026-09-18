@@ -5,6 +5,28 @@ import { getGroupSize } from "@/lib/guide/getGroupSize";
 import { getLandmarksByGroupId } from "@/lib/guide/getLandmarksByGroupId";
 import { validateGroupId } from "@/lib/guide/validateGroupId";
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const groupId = validateGroupId(slug);
+
+  if (!groupId) {
+    return {
+      title: "Page Not Found | Historic Landmarks of San Francisco",
+    };
+  }
+
+  const groupSize = getGroupSize(groupId);
+
+  return {
+    title: `Sightseeing Group ${groupId} | Historic Landmarks of San Francisco`,
+    description: `Locate and visit the ${groupSize} California Historical Landmarks in Group ${groupId} of our suggested sightseeing guide.`,
+  };
+}
+
 export default async function GuideGroupPage({
   params,
 }: {
@@ -24,8 +46,9 @@ export default async function GuideGroupPage({
       <h1>Group {groupId}</h1>
       <p>
         Please consult the map and text below for help locating and visiting the{" "}
-        {groupSize} Registered Historical Landmarks in Group {groupId}.
-        Landmarks are listed in a suggested sequence for seeing the sites.
+        {groupSize} registered California Historical Landmarks in Group{" "}
+        {groupId}. Landmarks are listed in a suggested sequence for seeing the
+        sites.
       </p>
       <section>
         <h2>Map</h2>

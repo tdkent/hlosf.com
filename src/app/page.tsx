@@ -52,7 +52,7 @@ export default function HomePage() {
         <p>
           It seems therefore particularly appropriate for residents and visitors
           alike to become more aware of the City's past. One way of reaching
-          this goal is by visiting the 38 California State Registered Historical
+          this goal is by visiting the 48 registered California Historical
           Landmarks to be found within San Francisco.
         </p>
         <p>

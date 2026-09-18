@@ -13,8 +13,8 @@ export default function GuidePage() {
         <h1>Sightseeing Guide</h1>
         <p>
           By consulting the text and accompanying maps, you should have no
-          trouble locating and visiting all of the City&#39;s 48 State
-          Registered Historical Landmarks. Enjoy yourself!
+          trouble locating and visiting all of the City's 48 California
+          Historical Landmarks. Enjoy yourself!
         </p>
       </section>
       <section>
