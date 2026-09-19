@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import GroupMap from "@/components/pages/group/GroupMap";
 import LandmarksListItem from "@/components/pages/landmarks/LandmarksListItem";
+import GoogleMap from "@/components/pages/maps/GoogleMap";
 import { getGroupSize } from "@/lib/guide/getGroupSize";
 import { getLandmarksByGroupId } from "@/lib/guide/getLandmarksByGroupId";
 import { validateGroupId } from "@/lib/guide/validateGroupId";
@@ -65,7 +65,7 @@ export default async function GuideGroupPage({
       <section>
         <h2>Map</h2>
         <div className="my-4">
-          <GroupMap data={landmarks} num={groupId} />
+          <GoogleMap landmarks={landmarks} variant="group" />
         </div>
       </section>
       <section>
