@@ -25,7 +25,7 @@ export default function HomePage() {
     <div>
       <div className="relative lg:my-10 mx-auto w-full aspect-3/2">
         <Image
-          className="mx-auto shadow-sm shadow-slate-400 rounded-lg object-cover"
+          className="mx-auto shadow-sm shadow-slate-400 rounded-lg object-cover dark:shadow-none"
           src={`${config.cloudinaryUrl}/q_80${config.cloudinaryFolder}/lm841-conservatory/Conservatory-site-2_uykjmg.jpg`}
           alt="The Conservatory of Flowers, San Francisco"
           fill

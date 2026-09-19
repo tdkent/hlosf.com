@@ -24,6 +24,7 @@ export default function GoogleMap(props: Props) {
   const { variant } = props;
 
   const mapOptions: MapProps = {
+    colorScheme: "FOLLOW_SYSTEM",
     disableDefaultUI: true,
     fullscreenControl: true,
     gestureHandling: "cooperative",

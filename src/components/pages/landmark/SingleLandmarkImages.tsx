@@ -22,7 +22,7 @@ const SingleLandmarkImages = ({ imgUrls, name, lmNum }: Props) => {
               }`}
             >
               <Image
-                className="my-4 shadow-md shadow-slate-400 rounded-lg w-150"
+                className="my-4 shadow-md shadow-slate-400 rounded-lg w-150 dark:shadow-none"
                 src={`${cloudinaryUrl}/q_70${cloudinaryFolder}${
                   url.split("hlsf")[1]
                 }`}

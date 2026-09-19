@@ -17,7 +17,7 @@ export default function NavBar() {
             <li key={label} className="">
               <Link
                 href={href}
-                className={`link hover:underline ${isActive ? "text-foreground-muted" : ""}`}
+                className={`link hover:underline ${isActive ? "text-foreground-muted dark:text-accent" : ""}`}
               >
                 {label}
               </Link>
