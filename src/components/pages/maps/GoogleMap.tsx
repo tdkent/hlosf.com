@@ -26,7 +26,7 @@ export default function GoogleMap(props: Props) {
   const mapOptions: MapProps = {
     disableDefaultUI: true,
     fullscreenControl: true,
-    gestureHandling: "greedy",
+    gestureHandling: "cooperative",
     mapId: config.MAP_ID,
     mapType: false,
     scaleControl: false,
