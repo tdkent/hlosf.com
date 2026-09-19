@@ -65,7 +65,7 @@ export default async function GuideGroupPage({
       <section>
         <h2>Map</h2>
         <div className="my-4">
-          <GroupMap data={landmarks} num={groupId} />
+          <GroupMap landmarks={landmarks} />
         </div>
       </section>
       <section>
