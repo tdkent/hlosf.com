@@ -13,6 +13,19 @@
   --font-serif: var(--font-cormorant);
 }
 
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: oklch(17.8% 0.028 260);
+    --color-background-secondary: oklch(22.8% 0.032 258);
+    --color-foreground: oklch(96.8% 0.014 254);
+    --color-foreground-secondary: oklch(75.0% 0.03 256);
+    --color-foreground-muted: oklch(61.5% 0.034 257);
+    --color-border: oklch(31.0% 0.03 258);
+    --color-accent: oklch(80% 0.13 225);
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-foreground;
