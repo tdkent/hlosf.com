@@ -1,4 +1,7 @@
+"use client";
+
 import { useState } from "react";
+import { PiImageBrokenDuotone } from "react-icons/pi";
 import imgSrcSets from "@/lib/image/imgSrcSets";
 
 interface Props {
@@ -26,8 +29,12 @@ export default function CustomImage({
   const { avif, jpeg, webp } = imgSrcSets(slug);
 
   return (
-    <div className={`overflow-hidden bg-content-alt border ${containerStyles}`}>
-      {error && <p>error</p>}
+    <div className={`overflow-hidden ${containerStyles}`}>
+      {error && (
+        <div className="border w-full h-full flex items-center justify-center">
+          <PiImageBrokenDuotone className="size-8" />
+        </div>
+      )}
       <picture className={`w-full h-full ${error ? "hidden" : ""}`}>
         <source srcSet={avif} sizes={sizes} type="image/avif" />
         <source srcSet={webp} sizes={sizes} type="image/webp" />
