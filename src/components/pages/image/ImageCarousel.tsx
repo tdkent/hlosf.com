@@ -4,19 +4,25 @@ import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
+import CustomImage from "@/components/pages/image/CustomImage";
 
-export default function ImageCarousel() {
+interface Props {
+  name: string;
+  numImgs: number;
+  slug: string;
+}
+
+export default function ImageCarousel({ name, numImgs, slug }: Props) {
+  const imgNumArr = Array.from({ length: numImgs }, (_, idx) => idx + 1);
   return (
-    <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-      <SwiperSlide>Slide 1</SwiperSlide>
-      <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide>
-      <SwiperSlide>Slide 5</SwiperSlide>
-      <SwiperSlide>Slide 6</SwiperSlide>
-      <SwiperSlide>Slide 7</SwiperSlide>
-      <SwiperSlide>Slide 8</SwiperSlide>
-      <SwiperSlide>Slide 9</SwiperSlide>
+    <Swiper navigation={true} modules={[Navigation]}>
+      {imgNumArr.map((num) => {
+        return (
+          <SwiperSlide key={num}>
+            <CustomImage altText={name} slug={`${slug}-${num}`} />
+          </SwiperSlide>
+        );
+      })}
     </Swiper>
   );
 }

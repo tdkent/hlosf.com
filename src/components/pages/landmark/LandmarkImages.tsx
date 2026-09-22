@@ -18,7 +18,13 @@ export default function LandmarkImages({ name, numImgs, slug }: Props) {
   return (
     <>
       {showModal && (
-        <CarouselModal setShowModal={setShowModal} showModal={showModal} />
+        <CarouselModal
+          name={name}
+          numImgs={numImgs}
+          slug={slug}
+          setShowModal={setShowModal}
+          showModal={showModal}
+        />
       )}
       <div className="my-4 flex flex-col gap-4">
         {imgNumArr.map((num) => {

@@ -7,11 +7,20 @@ import { useScrollLock } from "usehooks-ts";
 import ImageCarousel from "@/components/pages/image/ImageCarousel";
 
 interface Props {
+  name: string;
+  numImgs: number;
   setShowModal: Dispatch<SetStateAction<boolean>>;
   showModal: boolean;
+  slug: string;
 }
 
-export default function CarouselModal({ setShowModal, showModal }: Props) {
+export default function CarouselModal({
+  name,
+  numImgs,
+  setShowModal,
+  showModal,
+  slug,
+}: Props) {
   useScrollLock();
   return (
     <Modal
@@ -49,7 +58,7 @@ export default function CarouselModal({ setShowModal, showModal }: Props) {
       >
         <IoMdClose className="fill-accent size-10 lg:size-12" />
       </button>
-      <ImageCarousel />
+      <ImageCarousel name={name} numImgs={numImgs} slug={slug} />
     </Modal>
   );
 }
