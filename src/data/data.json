@@ -15,11 +15,7 @@
       "lat": 37.800854,
       "lng": -122.454573,
       "slug": "presidio-of-san-francisco",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1668031866/hlsf/lm79-presidio/Presidio-of-San-Francisco-plaque_nlwj8t.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1668031866/hlsf/lm79-presidio/Presidio-of-San-Francisco-site_xl2fyq.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1668031866/hlsf/lm79-presidio/Presidio-of-San-Francisco-archival_imhvdd.jpg"
-      ]
+      "numImgs": 2
     },
     {
       "id": 2,
@@ -35,12 +31,7 @@
       "lat": 37.795116,
       "lng": -122.4028288,
       "slug": "montgomery-block",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1668032640/hlsf/lm80_montgomery/Montgomery-Block-plaque_spucu6.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1668032640/hlsf/lm80_montgomery/Montgomery-Block-plaque-2_trr8mk.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1668032640/hlsf/lm80_montgomery/Montgomery-Block-Pony-Express-plaque_qngmzk.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1668032640/hlsf/lm80_montgomery/Montgomery-Block-1906_sxwcl6.jpg"
-      ]
+      "numImgs": 3
     },
     {
       "id": 3,
@@ -56,10 +47,7 @@
       "lat": 37.7944871,
       "lng": -122.4031405,
       "slug": "landing-place-of-captain-jb-montgomery",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669412425/hlsf/lm81-montgomery-landing/Montgomery-Landing-plaque_isn13a.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669412425/hlsf/lm81-montgomery-landing/Montgomery-Landing-site_ekunpg.jpg"
-      ]
+      "numImgs": 2
     },
     {
       "id": 4,
@@ -75,11 +63,7 @@
       "lat": 37.8104867,
       "lng": -122.4768365,
       "slug": "castillo-de-san-joaquin",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669412583/hlsf/lm82-castillo/Castillo-de-San-Joaquin-site_vkghqr.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669412583/hlsf/lm82-castillo/Castillo-de-San-Joaquin-site-2_hrt4pn.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669412583/hlsf/lm82-castillo/Castillo-de-San-Joaquin-plaque_yoghnw.jpg"
-      ]
+      "numImgs": 3
     },
     {
       "id": 5,
@@ -95,12 +79,7 @@
       "lat": 37.7910625,
       "lng": -122.3991993,
       "slug": "shoreline-markers",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669412786/hlsf/lm83-shoreline/Shoreline-Marker-Tablet-2_cwylkn.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669412786/hlsf/lm83-shoreline/Shoreline-Marker-site_agjahm.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669412785/hlsf/lm83-shoreline/Shoreline-Marker-Tablet-1_zibgn4.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669412786/hlsf/lm83-shoreline/Shoreline-Marker-marker_eahuuw.jpg"
-      ]
+      "numImgs": 4
     },
     {
       "id": 6,
@@ -117,11 +96,7 @@
       "lat": 37.7863649,
       "lng": -122.3898542,
       "slug": "rincon-hill",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669413117/hlsf/lm84-rincon/Rincon-Hill-plaque-2_nlmm8y.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669413117/hlsf/lm84-rincon/Rincon-Hill-1870_tqgwbm.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669413117/hlsf/lm84-rincon/Rincon-Hill-longshoremen-strike-1934_rlfd8w.jpg"
-      ]
+      "numImgs": 1
     },
     {
       "id": 7,
@@ -138,10 +113,7 @@
       "lat": 37.795185,
       "lng": -122.4062309,
       "slug": "office-of-the-california-star-newspaper",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669413211/hlsf/85-california-star/California-Star-site_tx5grj.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669413212/hlsf/85-california-star/California-Star-plaque_nibrvd.jpg"
-      ]
+      "numImgs": 2
     },
     {
       "id": 8,
@@ -157,12 +129,7 @@
       "lat": 37.7907814,
       "lng": -122.4050413,
       "slug": "california-theatre",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669413290/hlsf/lm86-california-theater/California-Theater-plaque_vaoayg.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669413290/hlsf/lm86-california-theater/California-Theater-site_llt7ea.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669413290/hlsf/lm86-california-theater/California-Theater-1870_ikks6w.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669413290/hlsf/lm86-california-theater/California-Theater-1920_wkoexx.jpg"
-      ]
+      "numImgs": 2
     },
     {
       "id": 9,
@@ -178,10 +145,7 @@
       "lat": 37.7941673,
       "lng": -122.4034908,
       "slug": "site-of-first-us-branch-mint-in-california",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669413396/hlsf/lm87-first-mint/First-US-Mint-in-California-plaque_v2dsl7.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669413396/hlsf/lm87-first-mint/First-US-Mint-in-California-site-2_sagmr4.jpg"
-      ]
+      "numImgs": 2
     },
     {
       "id": 10,
@@ -197,11 +161,7 @@
       "lat": 37.795137,
       "lng": -122.401844,
       "slug": "niantic-hotel",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669413561/hlsf/lm88-niantic/Niantic-painting_flfb8h.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669413585/hlsf/lm88-niantic/Piece-of-Niantic-ship_kraevi.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669413562/hlsf/lm88-niantic/Niantic-plaque_rw7pbn.jpg"
-      ]
+      "numImgs": 2
     },
     {
       "id": 11,
@@ -216,7 +176,7 @@
       "lat": 37.7928483,
       "lng": -122.4030224,
       "slug": "site-of-parrott-granite-block",
-      "imgUrls": []
+      "numImgs": 1
     },
     {
       "id": 12,
@@ -231,9 +191,7 @@
       "lat": 37.7943887,
       "lng": -122.3983322,
       "slug": "fort-gunnybags",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669413731/hlsf/lm90-gunnybags/Fort-Gunnybags-plaque_oey5cu.jpg"
-      ]
+      "numImgs": 1
     },
     {
       "id": 13,
@@ -248,7 +206,7 @@
       "lat": 37.802248,
       "lng": -122.405797,
       "slug": "telegraph-hill",
-      "imgUrls": []
+      "numImgs": 0
     },
     {
       "id": 14,
@@ -265,10 +223,7 @@
       "lat": 37.7949829,
       "lng": -122.4054487,
       "slug": "portsmouth-plaza",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669413911/hlsf/lm119-portsmouth/Portsmouth-Plaza-plaque_jrcq1y.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669413910/hlsf/lm119-portsmouth/Portsmouth-Plaza-site-2_koso8b.jpg"
-      ]
+      "numImgs": 2
     },
     {
       "id": 15,
@@ -284,10 +239,7 @@
       "lat": 37.7951339,
       "lng": -122.4045873,
       "slug": "el-dorado-parker-house-and-dennisons-exchange",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669413976/hlsf/lm192-eldorado/El-Dorado-Parker-House-plaque_foqfha.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669413976/hlsf/lm192-eldorado/El-Dorado-Parker-House-site_moss1k.jpg"
-      ]
+      "numImgs": 2
     },
     {
       "id": 16,
@@ -303,10 +255,7 @@
       "lat": 37.806849,
       "lng": -122.4226526,
       "slug": "entrance-of-the-san-carlos-into-san-francisco-bay",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669414042/hlsf/lm236-sancarlos/San-Carlos-Entry-San-Francisco-Bay-site_hnkvre.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669414041/hlsf/lm236-sancarlos/San-Carlos-Entry-San-Francisco-Bay-plaque_id6ate.jpg"
-      ]
+      "numImgs": 2
     },
     {
       "id": 17,
@@ -322,9 +271,7 @@
       "lat": 37.7641637,
       "lng": -122.4269497,
       "slug": "mission-dolores",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669414157/hlsf/lm327-mission-dolores/Mission-Dolores-site_vjbch2.jpg"
-      ]
+      "numImgs": 1
     },
     {
       "id": 18,
@@ -340,7 +287,7 @@
       "lat": 37.764,
       "lng": -122.42278,
       "slug": "site-of-original-mission-dolores-chapel-and-dolores-lagoon",
-      "imgUrls": []
+      "numImgs": 2
     },
     {
       "id": 19,
@@ -355,7 +302,7 @@
       "lat": 37.794329,
       "lng": -122.402293,
       "slug": "long-wharf",
-      "imgUrls": []
+      "numImgs": 1
     },
     {
       "id": 20,
@@ -371,10 +318,7 @@
       "lat": 37.796088,
       "lng": -122.403451,
       "slug": "site-of-the-first-meeting-of-freemasons-held-in-california",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669415110/hlsf/lm408-freemasons/Freemasons-First-Meeting-site_imitnf.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669415110/hlsf/lm408-freemasons/Freemasons-First-Meeting-site-2_osavst.jpg"
-      ]
+      "numImgs": 2
     },
     {
       "id": 21,
@@ -391,10 +335,7 @@
       "lat": 37.796486,
       "lng": -122.403312,
       "slug": "shermans-bank",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669415188/hlsf/lm453-shermans/Shermans-Bank-site_izafqj.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669415188/hlsf/lm453-shermans/Shermans-Bank-plaque_asrfka.jpg"
-      ]
+      "numImgs": 2
     },
     {
       "id": 22,
@@ -410,12 +351,7 @@
       "lat": 37.7698238,
       "lng": -122.4201606,
       "slug": "woodwards-gardens",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669415260/hlsf/lm454-woodwards/Woodwards-Gardens-plaque_fctxmb.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669415259/hlsf/lm454-woodwards/Woodwards-Gardens-site_ycavpg.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669672418/hlsf/lm454-woodwards/woodwards-gardens-1875_tseh0c.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669672419/hlsf/lm454-woodwards/woodwards-gardens-1880s_skkmos.jpg"
-      ]
+      "numImgs": 2
     },
     {
       "id": 23,
@@ -431,7 +367,7 @@
       "lat": 37.794492,
       "lng": -122.403146,
       "slug": "site-of-the-firm-of-mellus-and-howard",
-      "imgUrls": []
+      "numImgs": 0
     },
     {
       "id": 24,
@@ -447,10 +383,7 @@
       "lat": 37.796243,
       "lng": -122.403489,
       "slug": "site-of-first-jewish-religious-services-in-san-francisco",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669415409/hlsf/lm462-first-jewish/First-Jewish-Services-plaque_xtqp0g.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669415409/hlsf/lm462-first-jewish/First-Jewish-Services-site_vnoo9o.jpg"
-      ]
+      "numImgs": 2
     },
     {
       "id": 25,
@@ -465,10 +398,7 @@
       "lat": 37.794412,
       "lng": -122.405219,
       "slug": "eastern-terminus-of-clay-street-hill-railroad",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669415473/hlsf/lm500-clay/Clay-Street-Hill-Railroad-Terminus-plaque_m1jqgp.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669415472/hlsf/lm500-clay/Clay-Street-Hill-Railroad-Terminus-site_bbjhgr.jpg"
-      ]
+      "numImgs": 2
     },
     {
       "id": 26,
@@ -484,10 +414,7 @@
       "lat": 37.7945838,
       "lng": -122.4055059,
       "slug": "first-public-school",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669415586/hlsf/lm587-first-school/First-Public-School-site_hku6sf.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669415586/hlsf/lm587-first-school/First-Public-School-plaque_vrtnho.jpg"
-      ]
+      "numImgs": 2
     },
     {
       "id": 27,
@@ -503,9 +430,7 @@
       "lat": 37.7875744,
       "lng": -122.4081302,
       "slug": "union-square",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669415647/hlsf/lm623-union-sq/Union-Square-site-2_kfxqcf.jpg"
-      ]
+      "numImgs": 1
     },
     {
       "id": 28,
@@ -521,11 +446,7 @@
       "lat": 37.793872,
       "lng": -122.402173,
       "slug": "site-of-the-what-cheer-house",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669415739/hlsf/lm650-what-cheer/What-Cheer-House-plaque_zcag0j.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669415739/hlsf/lm650-what-cheer/What-Cheer-House-site_jnwqrs.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669415739/hlsf/lm650-what-cheer/What-Cheer-House-archival_pruoux.jpg"
-      ]
+      "numImgs": 2
     },
     {
       "id": 29,
@@ -542,11 +463,7 @@
       "lat": 37.784774,
       "lng": -122.422907,
       "slug": "sarcophagus-of-thomas-starr-king",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669415810/hlsf/lm691-starr/Thomas-Starr-King-Grave-site-2_qukecc.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669415810/hlsf/lm691-starr/Thomas-Starr-King-Grave-site_qxfkh0.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669415809/hlsf/lm691-starr/Thomas-Starr-King-Grave-plaque_qebw3y.jpg"
-      ]
+      "numImgs": 3
     },
     {
       "id": 30,
@@ -563,10 +480,7 @@
       "lat": 37.794878,
       "lng": -122.403202,
       "slug": "western-headquarters-of-russell-majors-and-waddell",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669415877/hlsf/lm696-pony-express/Pony-Express-site_bzo5ec.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669415877/hlsf/lm696-pony-express/Pony-Express-plaque_zocpbv.jpg"
-      ]
+      "numImgs": 2
     },
     {
       "id": 31,
@@ -582,11 +496,7 @@
       "lat": 37.791877,
       "lng": -122.410564,
       "slug": "site-of-the-mark-hopkins-institute-of-art",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669415954/hlsf/lm754-mark-hopkins/Mark-Hopkins-Art-Institute-plaque_jrkztd.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669415954/hlsf/lm754-mark-hopkins/Mark-Hopkins-Art-Institute-site_pnj4bg.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669673339/hlsf/lm754-mark-hopkins/mark-hopkins-mansion-1890s_yo8wxh.jpg"
-      ]
+      "numImgs": 3
     },
     {
       "id": 32,
@@ -601,9 +511,7 @@
       "lat": 37.786991,
       "lng": -122.448473,
       "slug": "site-of-laurel-hill-cemetery",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669416033/hlsf/lm760-laurel-hill/Laurel-Hill-Cemetery-site_w7pxm9.jpg"
-      ]
+      "numImgs": 1
     },
     {
       "id": 33,
@@ -619,10 +527,7 @@
       "lat": 37.735204,
       "lng": -122.424404,
       "slug": "original-site-of-st-marys-college",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669416076/hlsf/lm772-st-marys/St-Marys-College-plaque_qidgwt.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669416076/hlsf/lm772-st-marys/St-Marys-College-site_rnkvws.jpg"
-      ]
+      "numImgs": 2
     },
     {
       "id": 34,
@@ -638,10 +543,7 @@
       "lat": 37.764264,
       "lng": -122.426474,
       "slug": "el-camino-real",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669416155/hlsf/lm784-elcamino/El-Camino-Real-plaque_wt2xwl.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669416155/hlsf/lm784-elcamino/El-Camino-Real-site_r1hxxe.jpg"
-      ]
+      "numImgs": 2
     },
     {
       "id": 35,
@@ -658,9 +560,7 @@
       "lat": 37.747142,
       "lng": -122.420259,
       "slug": "original-site-of-the-bancroft-library",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669416236/hlsf/lm791-bancroft/Bancroft-Library-plaque_sur7gz.jpg"
-      ]
+      "numImgs": 1
     },
     {
       "id": 36,
@@ -676,10 +576,7 @@
       "lat": 37.792537,
       "lng": -122.405624,
       "slug": "site-of-old-st-marys-church",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669416282/hlsf/lm810-old-stmarys/Old-St-Marys-Church-site_wbs90n.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669416282/hlsf/lm810-old-stmarys/Old-St-Marys-Church-plaque_nawgmu.jpg"
-      ]
+      "numImgs": 2
     },
     {
       "id": 37,
@@ -695,10 +592,7 @@
       "lat": 37.794194,
       "lng": -122.403256,
       "slug": "hudsons-bay-company-headquarters",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669416352/hlsf/lm819-hudsons/Hudsons-Bay-Company-plaque_pdaodw.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669416351/hlsf/lm819-hudsons/Hudsons-Bay-Company-site_y3oeez.jpg"
-      ]
+      "numImgs": 2
     },
     {
       "id": 38,
@@ -714,11 +608,7 @@
       "lat": 37.772398,
       "lng": -122.460199,
       "slug": "the-conservatory",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669416414/hlsf/lm841-conservatory/Conservatory-site-2_uykjmg.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669416414/hlsf/lm841-conservatory/Conservatory-site_n2osmj.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669416413/hlsf/lm841-conservatory/Conservatory-plaque_qqdv0l.jpg"
-      ]
+      "numImgs": 3
     },
     {
       "id": 39,
@@ -734,10 +624,7 @@
       "lat": 37.7910456,
       "lng": -122.4017856,
       "slug": "site-of-first-california-state-fair",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669416515/hlsf/lm861-state-fair/First-California-State-Fair-plaque_i4vvt2.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669416515/hlsf/lm861-state-fair/First-California-State-Fair-site_ismug4.jpg"
-      ]
+      "numImgs": 2
     },
     {
       "id": 40,
@@ -753,9 +640,7 @@
       "lat": 37.7830004,
       "lng": -122.4068924,
       "slug": "old-united-states-mint",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669416584/hlsf/875-first-mint/old-united-states-mint-1_twxuk0.jpg"
-      ]
+      "numImgs": 1
     },
     {
       "id": 41,
@@ -770,10 +655,7 @@
       "lat": 37.787584,
       "lng": -122.406438,
       "slug": "city-of-paris-building",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669417047/hlsf/lm876-paris/city-of-paris-site-2_kbwn5n.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669417047/hlsf/lm876-paris/city-of-paris-site-1_dolqts.jpg"
-      ]
+      "numImgs": 2
     },
     {
       "id": 42,
@@ -789,10 +671,7 @@
       "lat": 37.791027,
       "lng": -122.399441,
       "slug": "site-of-invention-of-the-three-reel-bell-slot-machine",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669417229/hlsf/lm937-slot-machine/three-reel-bell-slot-machine-site-1_vmhmie.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669417229/hlsf/lm937-slot-machine/three-reel-bell-slot-machine-site-2_hqr4wr.jpg"
-      ]
+      "numImgs": 2
     },
     {
       "id": 43,
@@ -808,10 +687,7 @@
       "lat": 37.800321,
       "lng": -122.402628,
       "slug": "farnsworths-green-street-lab",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669417276/hlsf/lm941-farnsworth/farnsworths-green-street-lab-2_b1vcpi.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669417276/hlsf/lm941-farnsworth/farnsworths-green-street-lab-1_h634oq.jpg"
-      ]
+      "numImgs": 2
     },
     {
       "id": 44,
@@ -826,9 +702,7 @@
       "lat": 37.7795692,
       "lng": -122.4212046,
       "slug": "birthplace-of-the-united-nations-war-memorial-complex",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669674697/hlsf/lm964-un/war-memorial-complex-1935_vi32k0.jpg"
-      ]
+      "numImgs": 1
     },
     {
       "id": 45,
@@ -843,9 +717,7 @@
       "lat": 37.808135,
       "lng": -122.475831,
       "slug": "golden-gate-bridge",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669674180/hlsf/lm974-ggb/golden-gate-bridge-1940_mq1xqy.jpg"
-      ]
+      "numImgs": 0
     },
     {
       "id": 46,
@@ -861,10 +733,7 @@
       "lat": 37.8226293,
       "lng": -122.375205,
       "slug": "treasure-island-golden-gate-international-exposition",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669418453/hlsf/lm987-treasure-island/treasure-island-1_zogvsy.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1670285495/hlsf/lm987-treasure-island/treasure-island-1939_ddpogm.jpg"
-      ]
+      "numImgs": 1
     },
     {
       "id": 47,
@@ -880,10 +749,7 @@
       "lat": 37.7362937,
       "lng": -122.4397569,
       "slug": "site-of-the-first-dynamite-factory-in-the-united-states",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669418524/hlsf/lm1002-dynamite/first-dynamite-factory-1_whelvi.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669418524/hlsf/lm1002-dynamite/first-dynamite-factory-3_itm1uk.jpg"
-      ]
+      "numImgs": 2
     },
     {
       "id": 48,
@@ -899,10 +765,7 @@
       "lat": 37.802526,
       "lng": -122.407875,
       "slug": "original-site-of-the-third-baptist-church",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669418595/hlsf/1010-third-baptist/third-baptist-church-2_jnjgyn.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669418595/hlsf/1010-third-baptist/third-baptist-church-1_up2hhd.jpg"
-      ]
+      "numImgs": 2
     },
     {
       "id": 49,
@@ -918,10 +781,7 @@
       "lat": 37.80116,
       "lng": -122.40957,
       "slug": "juana-briones-pioneer-settler-of-yerba-buena",
-      "imgUrls": [
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669418694/hlsf/lm1024/juana-briones-y-tapia-de-miranda-2_d05jgm.jpg",
-        "https://res.cloudinary.com/do28aglgy/image/upload/v1669418693/hlsf/lm1024/juana-briones-y-tapia-de-miranda-3_h9kcu4.jpg"
-      ]
+      "numImgs": 2
     }
   ]
 }
