@@ -45,11 +45,11 @@ export default function Modal({ children, setShowModal, showModal }: Props) {
     >
       <button
         aria-label="Close"
-        className="fixed top-2 right-2 z-30 text-xl cursor-pointer lg:top-6 lg:right-6"
+        className="fixed top-4 right-4 z-30 cursor-pointer bg-black/50 rounded-full lg:top-6 lg:right-8"
         onClick={() => setShowModal(false)}
         type="button"
       >
-        <IoMdClose className="fill-accent size-10 lg:size-12" />
+        <IoMdClose className="size-10 lg:size-12" />
       </button>
       {children}
     </ReactModal>
