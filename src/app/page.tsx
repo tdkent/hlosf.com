@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { FaArrowCircleRight } from "react-icons/fa";
-import { config } from "@/lib/config";
+import CustomImage from "@/components/pages/image/CustomImage";
 
 const title = "Explore SF history | Historic Landmarks of San Francisco";
 
@@ -23,16 +22,14 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <div>
-      <div className="relative lg:my-10 mx-auto w-full aspect-3/2">
-        <Image
-          className="mx-auto shadow-sm shadow-slate-400 rounded-lg object-cover dark:shadow-none"
-          src={`${config.cloudinaryUrl}/q_80${config.cloudinaryFolder}/lm841-conservatory/Conservatory-site-2_uykjmg.jpg`}
-          alt="The Conservatory of Flowers, San Francisco"
-          fill
-          priority
-          sizes="(max-width: 900px) 100vw, 900px"
-        />
-      </div>
+      <CustomImage
+        altText="The Conservatory of Flowers, San Francisco"
+        containerStyles="aspect-3/2 rounded-lg shadow-lg shadow-foreground-secondary lg:my-10 dark:shadow-none"
+        fetchPriority="high"
+        lazyLoading="eager"
+        sizes="(max-width: 900px) 100vw, 900px"
+        slug="the-conservatory-2"
+      />
 
       <details className="my-8">
         <summary className="cursor-pointer w-fit">

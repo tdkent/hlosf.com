@@ -13,7 +13,7 @@ export interface Landmark {
   lat: number;
   lng: number;
   slug: string;
-  imgUrls: string[];
+  numImgs: number;
 }
 
 export type SortMethod = "group" | "name" | "number";
