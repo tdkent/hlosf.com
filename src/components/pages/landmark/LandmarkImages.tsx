@@ -1,4 +1,8 @@
+"use client";
+
+import { useState } from "react";
 import CustomImage from "@/components/pages/image/CustomImage";
+import ImageCarousel from "@/components/pages/image/ImageCarousel";
 
 interface Props {
   name: string;
@@ -7,23 +11,31 @@ interface Props {
 }
 
 export default function LandmarkImages({ name, numImgs, slug }: Props) {
+  const [showCarousel, setShowCarousel] = useState(false);
+
   const imgNumArr = Array.from({ length: numImgs }, (_, idx) => idx + 1);
+
   return (
-    <section>
-      <h2>Images</h2>
+    <>
+      {showCarousel && <ImageCarousel />}
       <div className="my-4 flex flex-col gap-4">
         {imgNumArr.map((num) => {
           return (
-            <CustomImage
+            <button
               key={num}
-              altText={name}
-              containerStyles="border"
-              fetchPriority="low"
-              slug={`${slug}-${num}`}
-            />
+              onClick={() => setShowCarousel(true)}
+              type="button"
+            >
+              <CustomImage
+                altText={name}
+                containerStyles="border"
+                fetchPriority="low"
+                slug={`${slug}-${num}`}
+              />
+            </button>
           );
         })}
       </div>
-    </section>
+    </>
   );
 }
