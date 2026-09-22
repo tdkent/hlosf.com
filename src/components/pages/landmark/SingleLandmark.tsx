@@ -1,6 +1,6 @@
 import Link from "next/link";
+import LandmarkImages from "@/components/pages/landmark/LandmarkImages";
 import ParsedHtml from "@/components/pages/landmark/ParsedHtml";
-import SingleLandmarkImages from "@/components/pages/landmark/SingleLandmarkImages";
 import GoogleMap from "@/components/pages/maps/GoogleMap";
 import { updateComplexLmNumber } from "@/lib/landmarks/updateComplexLmNumber";
 import type { Landmark } from "@/lib/types";
@@ -17,9 +17,10 @@ export default function SingleLandmark({ landmark }: Props) {
     markerText,
     hasMarker,
     dedicationYear,
-    imgUrls,
     name,
+    numImgs,
     number,
+    slug,
     update_html,
   } = landmark;
 
@@ -82,12 +83,7 @@ export default function SingleLandmark({ landmark }: Props) {
           <GoogleMap landmark={landmark} variant="single" />
         </div>
       </section>
-      {imgUrls.length ? (
-        <section>
-          <h2>Images</h2>
-          <SingleLandmarkImages imgUrls={imgUrls} name={name} lmNum={number} />
-        </section>
-      ) : null}
+      {numImgs && <LandmarkImages numImgs={numImgs} slug={slug} />}
     </article>
   );
 }

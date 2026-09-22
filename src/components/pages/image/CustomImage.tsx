@@ -17,7 +17,7 @@ interface Props {
 /** Responsive picture element loads images based on display/device. */
 export default function CustomImage({
   altText,
-  containerStyles = "w-full aspect-[7/5]",
+  containerStyles = "w-full aspect-3/2",
   fetchPriority,
   imgStyles,
   lazyLoading = "lazy",
