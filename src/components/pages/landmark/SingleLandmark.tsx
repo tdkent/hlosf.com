@@ -83,7 +83,9 @@ export default function SingleLandmark({ landmark }: Props) {
           <GoogleMap landmark={landmark} variant="single" />
         </div>
       </section>
-      {numImgs && <LandmarkImages name={name} numImgs={numImgs} slug={slug} />}
+      {numImgs ? (
+        <LandmarkImages name={name} numImgs={numImgs} slug={slug} />
+      ) : null}
     </article>
   );
 }
