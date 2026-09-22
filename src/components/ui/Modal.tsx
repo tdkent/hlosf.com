@@ -2,28 +2,21 @@
 
 import type { Dispatch, SetStateAction } from "react";
 import { IoMdClose } from "react-icons/io";
-import Modal from "react-modal";
+import ReactModal from "react-modal";
 import { useScrollLock } from "usehooks-ts";
-import ImageCarousel from "@/components/pages/image/ImageCarousel";
 
 interface Props {
-  name: string;
-  numImgs: number;
+  children: React.ReactNode;
   setShowModal: Dispatch<SetStateAction<boolean>>;
   showModal: boolean;
-  slug: string;
 }
 
-export default function CarouselModal({
-  name,
-  numImgs,
-  setShowModal,
-  showModal,
-  slug,
-}: Props) {
+ReactModal.setAppElement("#root");
+
+export default function Modal({ children, setShowModal, showModal }: Props) {
   useScrollLock();
   return (
-    <Modal
+    <ReactModal
       isOpen={showModal}
       onRequestClose={() => setShowModal(false)}
       style={{
@@ -47,7 +40,7 @@ export default function CarouselModal({
           outline: "none",
         },
       }}
-      contentLabel="Example Modal"
+      contentLabel="Modal"
       className="w-full"
     >
       <button
@@ -58,7 +51,7 @@ export default function CarouselModal({
       >
         <IoMdClose className="fill-accent size-10 lg:size-12" />
       </button>
-      <ImageCarousel name={name} numImgs={numImgs} slug={slug} />
-    </Modal>
+      {children}
+    </ReactModal>
   );
 }

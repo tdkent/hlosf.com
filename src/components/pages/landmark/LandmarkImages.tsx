@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import CarouselModal from "@/components/pages/image/CarouselModal";
 import CustomImage from "@/components/pages/image/CustomImage";
+import ImageCarousel from "@/components/pages/image/ImageCarousel";
+import Modal from "@/components/ui/Modal";
 
 interface Props {
   name: string;
@@ -18,18 +19,19 @@ export default function LandmarkImages({ name, numImgs, slug }: Props) {
   return (
     <>
       {showModal && (
-        <CarouselModal
-          name={name}
-          numImgs={numImgs}
-          slug={slug}
-          setShowModal={setShowModal}
-          showModal={showModal}
-        />
+        <Modal setShowModal={setShowModal} showModal={showModal}>
+          <ImageCarousel name={name} numImgs={numImgs} slug={slug} />
+        </Modal>
       )}
       <div className="my-4 flex flex-col gap-4">
         {imgNumArr.map((num) => {
           return (
-            <button key={num} onClick={() => setShowModal(true)} type="button">
+            <button
+              key={num}
+              className="cursor-pointer"
+              onClick={() => setShowModal(true)}
+              type="button"
+            >
               <CustomImage
                 altText={name}
                 containerStyles="border"
