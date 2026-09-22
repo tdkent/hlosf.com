@@ -1,7 +1,7 @@
 "use client";
 
 import type { Dispatch, SetStateAction } from "react";
-import { IoMdClose } from "react-icons/io";
+import { VscChromeClose } from "react-icons/vsc";
 import ReactModal from "react-modal";
 import { useScrollLock } from "usehooks-ts";
 
@@ -45,11 +45,11 @@ export default function Modal({ children, setShowModal, showModal }: Props) {
     >
       <button
         aria-label="Close"
-        className="fixed top-4 right-4 z-30 cursor-pointer bg-black/50 rounded-full lg:top-6 lg:right-8"
+        className="fixed top-4 right-2 z-30 cursor-pointer bg-black/50 rounded-full p-1 lg:top-6 lg:right-4"
         onClick={() => setShowModal(false)}
         type="button"
       >
-        <IoMdClose className="size-10 lg:size-12" />
+        <VscChromeClose className="size-8 lg:size-9" />
       </button>
       {children}
     </ReactModal>

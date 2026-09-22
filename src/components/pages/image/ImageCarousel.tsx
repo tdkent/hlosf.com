@@ -15,11 +15,7 @@ interface Props {
 export default function ImageCarousel({ name, numImgs, slug }: Props) {
   const imgNumArr = Array.from({ length: numImgs }, (_, idx) => idx + 1);
   return (
-    <Swiper
-      navigation={true}
-      modules={[Navigation]}
-      className="w-full h-full [&_.swiper-slide]:flex!"
-    >
+    <Swiper navigation={true} modules={[Navigation]} className="my-swiper">
       {imgNumArr.map((num) => {
         return (
           <SwiperSlide key={num} className="justify-center items-center">
