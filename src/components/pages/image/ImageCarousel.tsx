@@ -15,10 +15,14 @@ interface Props {
 export default function ImageCarousel({ name, numImgs, slug }: Props) {
   const imgNumArr = Array.from({ length: numImgs }, (_, idx) => idx + 1);
   return (
-    <Swiper navigation={true} modules={[Navigation]}>
+    <Swiper
+      navigation={true}
+      modules={[Navigation]}
+      className="w-full h-full [&_.swiper-slide]:flex!"
+    >
       {imgNumArr.map((num) => {
         return (
-          <SwiperSlide key={num}>
+          <SwiperSlide key={num} className="justify-center items-center">
             <CustomImage altText={name} slug={`${slug}-${num}`} />
           </SwiperSlide>
         );
