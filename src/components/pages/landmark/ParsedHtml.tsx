@@ -21,7 +21,7 @@ export default function ParsedHtml({ htmlContent, styles }: Props) {
         else text = "UNKNOWN TEXT";
 
         return (
-          <Link className="content-link" href={href}>
+          <Link className="underline link hover:no-underline" href={href}>
             {text}
           </Link>
         );
