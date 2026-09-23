@@ -67,17 +67,14 @@ export default function HomePage() {
         <p>
           Anyone who has traveled in California has seen the handsome bronze
           plaques which designate State Historical Landmarks. These tablets are
-          placed at sites of <q>statewide historical significance</q> which have{" "}
-          <q>
-            anthropological, cultural, military, political, architectural,
-            economic, scientific or technical, religious, experimental, or other
-            values
-          </q>
-          , according to the State Department of Parks and Recreation handbook
-          California Historical Landmarks. A seven member advisory committee
-          appointed by the Governor determines whether a given site is worthy of
-          landmark status or not. There are well over 800 such landmarks
-          throughout the state, with new ones being added each year.
+          placed at sites of "statewide historical significance" which have{" "}
+          "anthropological, cultural, military, political, architectural,
+          economic, scientific or technical, religious, experimental, or other
+          values", according to the State Department of Parks and Recreation
+          handbook California Historical Landmarks. A seven member advisory
+          committee appointed by the Governor determines whether a given site is
+          worthy of landmark status or not. There are well over 800 such
+          landmarks throughout the state, with new ones being added each year.
         </p>
         <p>
           Not all sites have official state plaques. Some have tablets provided
