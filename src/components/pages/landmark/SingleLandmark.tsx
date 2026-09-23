@@ -58,7 +58,7 @@ export default function SingleLandmark({ landmark }: Props) {
         </dl>
       </header>
       <section>
-        <h2>History & Description</h2>
+        <h2>History & Description{number <= 861 && " (1976)"}</h2>
         <ParsedHtml htmlContent={description} />
       </section>
       {update_html && (
