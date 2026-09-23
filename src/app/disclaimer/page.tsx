@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Privacy & Terms",
@@ -73,6 +74,23 @@ export default function Disclaimer() {
           contain errors or become outdated.
         </p>
         <h2>Image Use and Copyright</h2>
+        <p>
+          All archival images displayed on this site are public domain and
+          sourced from{" "}
+          <Link
+            className="link underline hover:no-underline"
+            href="https://commons.wikimedia.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Wikimedia Commons
+          </Link>
+          .
+          <p>
+            All original images, including images of landmark sites and markers,
+            are copyrighted to Historical Landmarks of San Francisco website.
+          </p>
+        </p>
         <p>
           Images and other content displayed on this site are provided for
           informational viewing on this website only unless otherwise noted.
