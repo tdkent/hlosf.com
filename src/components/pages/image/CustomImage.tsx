@@ -17,7 +17,7 @@ interface Props {
 /** Responsive picture element loads images based on display/device. */
 export default function CustomImage({
   altText,
-  containerStyles = "w-full aspect-3/2",
+  containerStyles,
   fetchPriority,
   imgStyles,
   lazyLoading = "lazy",
@@ -29,7 +29,7 @@ export default function CustomImage({
   const { avif, jpeg, webp } = imgSrcSets(slug);
 
   return (
-    <div className={`overflow-hidden ${containerStyles}`}>
+    <div className={`overflow-hidden w-full ${containerStyles}`}>
       {error && (
         <div className="border w-full h-full flex items-center justify-center">
           <PiImageBrokenDuotone className="size-8" />
