@@ -31,14 +31,16 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${workSans.variable} ${cormorant.variable}`}>
       <body className="font-sans bg-background text-foreground h-screen flex flex-col">
-        <Header />
-        <div className="w-full flex-1">
-          <NavBar />
-          <main className="my-12 px-6 w-full max-w-225 mx-auto">
-            {children}
-          </main>
+        <div id="root">
+          <Header />
+          <div className="w-full flex-1">
+            <NavBar />
+            <main className="my-12 px-6 w-full max-w-225 mx-auto">
+              {children}
+            </main>
+          </div>
+          <Footer />
         </div>
-        <Footer />
       </body>
     </html>
   );

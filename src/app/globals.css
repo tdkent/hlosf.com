@@ -64,7 +64,32 @@
     }
   }
 
+  /* Google Maps */
+
   .map {
     @apply h-100 md:h-125;
+  }
+
+  /* Swiper */
+
+  .my-swiper {
+    @apply h-full w-full;
+  }
+
+  .my-swiper .swiper-slide {
+    @apply flex!;
+  }
+
+  .my-swiper .swiper-button-prev,
+  .my-swiper .swiper-button-next {
+    @apply bg-black/50! rounded-full! text-white! p-2! h-10! w-10! lg:h-11! lg:w-11!;
+  }
+
+  .my-swiper .swiper-button-prev {
+    @apply ml-2! lg:ml-3!;
+  }
+
+  .my-swiper .swiper-button-next {
+    @apply mr-2! lg:mr-3!;
   }
 }

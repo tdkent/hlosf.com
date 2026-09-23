@@ -84,7 +84,10 @@ export default function SingleLandmark({ landmark }: Props) {
         </div>
       </section>
       {numImgs ? (
-        <LandmarkImages name={name} numImgs={numImgs} slug={slug} />
+        <section>
+          <h2>Images</h2>
+          <LandmarkImages name={name} numImgs={numImgs} slug={slug} />
+        </section>
       ) : null}
     </article>
   );
