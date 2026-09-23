@@ -15,7 +15,7 @@
       "lat": 37.800854,
       "lng": -122.454573,
       "slug": "presidio-of-san-francisco",
-      "numImgs": 2
+      "numImgs": 4
     },
     {
       "id": 2,
@@ -31,7 +31,7 @@
       "lat": 37.795116,
       "lng": -122.4028288,
       "slug": "montgomery-block",
-      "numImgs": 3
+      "numImgs": 4
     },
     {
       "id": 3,
@@ -96,7 +96,7 @@
       "lat": 37.7863649,
       "lng": -122.3898542,
       "slug": "rincon-hill",
-      "numImgs": 1
+      "numImgs": 3
     },
     {
       "id": 7,
@@ -129,7 +129,7 @@
       "lat": 37.7907814,
       "lng": -122.4050413,
       "slug": "california-theatre",
-      "numImgs": 2
+      "numImgs": 3
     },
     {
       "id": 9,
@@ -161,7 +161,7 @@
       "lat": 37.795137,
       "lng": -122.401844,
       "slug": "niantic-hotel",
-      "numImgs": 2
+      "numImgs": 3
     },
     {
       "id": 11,
@@ -176,7 +176,7 @@
       "lat": 37.7928483,
       "lng": -122.4030224,
       "slug": "site-of-parrott-granite-block",
-      "numImgs": 1
+      "numImgs": 2
     },
     {
       "id": 12,
@@ -191,7 +191,7 @@
       "lat": 37.7943887,
       "lng": -122.3983322,
       "slug": "fort-gunnybags",
-      "numImgs": 1
+      "numImgs": 2
     },
     {
       "id": 13,
@@ -206,7 +206,7 @@
       "lat": 37.802248,
       "lng": -122.405797,
       "slug": "telegraph-hill",
-      "numImgs": 0
+      "numImgs": 3
     },
     {
       "id": 14,
@@ -223,7 +223,7 @@
       "lat": 37.7949829,
       "lng": -122.4054487,
       "slug": "portsmouth-plaza",
-      "numImgs": 2
+      "numImgs": 3
     },
     {
       "id": 15,
@@ -271,7 +271,7 @@
       "lat": 37.7641637,
       "lng": -122.4269497,
       "slug": "mission-dolores",
-      "numImgs": 1
+      "numImgs": 3
     },
     {
       "id": 18,
@@ -351,7 +351,7 @@
       "lat": 37.7698238,
       "lng": -122.4201606,
       "slug": "woodwards-gardens",
-      "numImgs": 2
+      "numImgs": 4
     },
     {
       "id": 23,
@@ -430,7 +430,7 @@
       "lat": 37.7875744,
       "lng": -122.4081302,
       "slug": "union-square",
-      "numImgs": 1
+      "numImgs": 2
     },
     {
       "id": 28,
@@ -446,7 +446,7 @@
       "lat": 37.793872,
       "lng": -122.402173,
       "slug": "site-of-the-what-cheer-house",
-      "numImgs": 2
+      "numImgs": 3
     },
     {
       "id": 29,
@@ -463,7 +463,7 @@
       "lat": 37.784774,
       "lng": -122.422907,
       "slug": "sarcophagus-of-thomas-starr-king",
-      "numImgs": 3
+      "numImgs": 4
     },
     {
       "id": 30,
@@ -496,7 +496,7 @@
       "lat": 37.791877,
       "lng": -122.410564,
       "slug": "site-of-the-mark-hopkins-institute-of-art",
-      "numImgs": 2
+      "numImgs": 4
     },
     {
       "id": 32,
@@ -511,7 +511,7 @@
       "lat": 37.786991,
       "lng": -122.448473,
       "slug": "site-of-laurel-hill-cemetery",
-      "numImgs": 1
+      "numImgs": 2
     },
     {
       "id": 33,
@@ -560,7 +560,7 @@
       "lat": 37.747142,
       "lng": -122.420259,
       "slug": "original-site-of-the-bancroft-library",
-      "numImgs": 1
+      "numImgs": 2
     },
     {
       "id": 36,
@@ -576,7 +576,7 @@
       "lat": 37.792537,
       "lng": -122.405624,
       "slug": "site-of-old-st-marys-church",
-      "numImgs": 2
+      "numImgs": 5
     },
     {
       "id": 37,
@@ -640,7 +640,7 @@
       "lat": 37.7830004,
       "lng": -122.4068924,
       "slug": "old-united-states-mint",
-      "numImgs": 1
+      "numImgs": 3
     },
     {
       "id": 41,
@@ -655,7 +655,7 @@
       "lat": 37.787584,
       "lng": -122.406438,
       "slug": "city-of-paris-building",
-      "numImgs": 2
+      "numImgs": 3
     },
     {
       "id": 42,
@@ -717,7 +717,7 @@
       "lat": 37.808135,
       "lng": -122.475831,
       "slug": "golden-gate-bridge",
-      "numImgs": 0
+      "numImgs": 3
     },
     {
       "id": 46,
