@@ -14,35 +14,30 @@ interface Props {
   slug: string;
 }
 
-export default function LandmarkImages({ name, numImgs, slug }: Props) {
+export default function LandmarkImages(props: Props) {
   const [showModal, setShowModal] = useState(false);
   const [initialSlideIdx, setInitialSlideIdx] = useState<number>(0);
 
   // store controlled swiper instance
   const [controlled, setControlled] = useState<SwiperType | null>(null);
 
+  const carouselProps = {
+    setInitialSlideIdx,
+    initialSlideIdx,
+    ...props,
+  };
+
   return (
     <>
       <ReactModal setShowModal={setShowModal} showModal={showModal}>
         <SwiperCarousel
           controller={{ control: controlled }}
-          name={name}
-          numImgs={numImgs}
-          setInitialSlideIdx={setInitialSlideIdx}
-          initialSlideIdx={initialSlideIdx}
-          slug={slug}
+          {...carouselProps}
         />
       </ReactModal>
 
       <div className="my-4 flex flex-col gap-4">
-        <SwiperCarousel
-          initialSlideIdx={initialSlideIdx}
-          name={name}
-          numImgs={numImgs}
-          onSwiper={setControlled}
-          setInitialSlideIdx={setInitialSlideIdx}
-          slug={slug}
-        />
+        <SwiperCarousel onSwiper={setControlled} {...carouselProps} />
 
         <button
           className="w-fit text-base link underline hover:no-underline lg:text-lg"
