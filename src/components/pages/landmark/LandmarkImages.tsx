@@ -84,6 +84,13 @@ export default function LandmarkImages({ name, numImgs, slug }: Props) {
           slideIdx={slideIdx}
           slug={slug}
         />
+
+        <button
+          className="w-fit text-base link underline hover:no-underline lg:text-lg"
+          type="button"
+        >
+          View in fullscreen mode
+        </button>
       </div>
     </>
   );
