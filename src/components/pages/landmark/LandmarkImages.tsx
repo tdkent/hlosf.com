@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { VscChromeClose } from "react-icons/vsc";
-// import Modal from "@/components/ui/Modal";
 import Modal from "react-modal";
 import CustomImage from "@/components/pages/image/CustomImage";
 import ImageCarousel from "@/components/pages/image/ImageCarousel";
