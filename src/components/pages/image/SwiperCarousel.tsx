@@ -1,25 +1,31 @@
 "use client";
 
-import { A11y, EffectFade, Navigation } from "swiper/modules";
+import { A11y, Controller, EffectFade, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 import type { Dispatch, SetStateAction } from "react";
+import type { Swiper as SwiperType } from "swiper";
+import type { ControllerOptions } from "swiper/types";
 import CustomImage from "@/components/pages/image/CustomImage";
 
 interface Props {
+  controller?: boolean | ControllerOptions;
   initialSlideIdx: number | undefined;
   name: string;
   numImgs: number;
+  onSwiper?: Dispatch<SetStateAction<SwiperType | null>>;
   setInitialSlideIdx: Dispatch<SetStateAction<number>>;
   slug: string;
 }
 
-export default function ImageCarousel({
+export default function SwiperCarousel({
+  controller,
   initialSlideIdx,
   name,
   numImgs,
+  onSwiper,
   setInitialSlideIdx,
   slug,
 }: Props) {
@@ -27,12 +33,14 @@ export default function ImageCarousel({
   return (
     <Swiper
       className="my-swiper"
+      controller={controller}
       effect="fade"
       initialSlide={initialSlideIdx}
-      modules={[A11y, EffectFade, Navigation]}
+      modules={[A11y, Controller, EffectFade, Navigation]}
       navigation
       onNavigationNext={() => setInitialSlideIdx((prev) => ++prev)}
       onNavigationPrev={() => setInitialSlideIdx((prev) => --prev)}
+      onSwiper={onSwiper}
     >
       {imgNumArr.map((num) => {
         return (

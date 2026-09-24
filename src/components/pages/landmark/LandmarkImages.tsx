@@ -1,14 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { A11y, Controller, EffectFade, Navigation } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-// import ImageCarousel from "@/components/pages/image/ImageCarousel";
+import SwiperCarousel from "@/components/pages/image/SwiperCarousel";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 import type { Swiper as SwiperType } from "swiper";
-import CustomImage from "@/components/pages/image/CustomImage";
 import ReactModal from "@/components/ui/ReactModal";
 
 interface Props {
@@ -18,71 +15,34 @@ interface Props {
 }
 
 export default function LandmarkImages({ name, numImgs, slug }: Props) {
-  // store controlled swiper instance
-  const [controlledSwiper, setControlledSwiper] = useState<SwiperType | null>(
-    null,
-  );
   const [showModal, setShowModal] = useState(false);
   const [initialSlideIdx, setInitialSlideIdx] = useState<number>(0);
 
-  const imgNumArr = Array.from({ length: numImgs }, (_, idx) => idx + 1);
+  // store controlled swiper instance
+  const [controlled, setControlled] = useState<SwiperType | null>(null);
 
   return (
     <>
       <ReactModal setShowModal={setShowModal} showModal={showModal}>
-        {/* <ImageCarousel
+        <SwiperCarousel
+          controller={{ control: controlled }}
           name={name}
           numImgs={numImgs}
           setInitialSlideIdx={setInitialSlideIdx}
           initialSlideIdx={initialSlideIdx}
           slug={slug}
-        /> */}
-        <Swiper
-          className="my-swiper"
-          effect="fade"
-          initialSlide={initialSlideIdx}
-          modules={[A11y, Controller, EffectFade, Navigation]}
-          navigation
-          controller={{ control: controlledSwiper }}
-          onNavigationNext={() => setInitialSlideIdx((prev) => ++prev)}
-          onNavigationPrev={() => setInitialSlideIdx((prev) => --prev)}
-        >
-          {imgNumArr.map((num) => {
-            return (
-              <SwiperSlide key={num} className="justify-center items-center">
-                <CustomImage altText={name} slug={`${slug}-${num}`} />
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
+        />
       </ReactModal>
 
       <div className="my-4 flex flex-col gap-4">
-        {/* <ImageCarousel
+        <SwiperCarousel
+          initialSlideIdx={initialSlideIdx}
           name={name}
           numImgs={numImgs}
+          onSwiper={setControlled}
           setInitialSlideIdx={setInitialSlideIdx}
-          initialSlideIdx={initialSlideIdx}
           slug={slug}
-        /> */}
-
-        <Swiper
-          className="my-swiper"
-          effect="fade"
-          modules={[A11y, Controller, EffectFade, Navigation]}
-          navigation
-          onSwiper={setControlledSwiper}
-          onNavigationNext={() => setInitialSlideIdx((prev) => ++prev)}
-          onNavigationPrev={() => setInitialSlideIdx((prev) => --prev)}
-        >
-          {imgNumArr.map((num) => {
-            return (
-              <SwiperSlide key={num} className="justify-center items-center">
-                <CustomImage altText={name} slug={`${slug}-${num}`} />
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
+        />
 
         <button
           className="w-fit text-base link underline hover:no-underline lg:text-lg"
