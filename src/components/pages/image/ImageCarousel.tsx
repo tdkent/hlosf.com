@@ -1,9 +1,10 @@
 "use client";
 
-import { A11y, Navigation } from "swiper/modules";
+import { A11y, EffectFade, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/effect-fade";
 import CustomImage from "@/components/pages/image/CustomImage";
 
 interface Props {
@@ -22,9 +23,10 @@ export default function ImageCarousel({
   const imgNumArr = Array.from({ length: numImgs }, (_, idx) => idx + 1);
   return (
     <Swiper
-      navigation
-      modules={[A11y, Navigation]}
       className="my-swiper"
+      effect="fade"
+      modules={[A11y, EffectFade, Navigation]}
+      navigation
       onSwiper={(swiper) => swiper.slideTo(slideIdx ?? 0, 0)}
     >
       {imgNumArr.map((num) => {

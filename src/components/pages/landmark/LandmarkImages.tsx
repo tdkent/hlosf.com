@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { VscChromeClose } from "react-icons/vsc";
 import Modal from "react-modal";
-import CustomImage from "@/components/pages/image/CustomImage";
 import ImageCarousel from "@/components/pages/image/ImageCarousel";
 
 interface Props {
@@ -79,23 +78,12 @@ export default function LandmarkImages({ name, numImgs, slug }: Props) {
       </Modal>
 
       <div className="my-4 flex flex-col gap-4">
-        {imgNumArr.map((num, idx) => {
-          return (
-            <button
-              key={num}
-              className="cursor-pointer"
-              onClick={() => handleClick(idx)}
-              type="button"
-            >
-              <CustomImage
-                altText={name}
-                containerStyles="border"
-                fetchPriority="low"
-                slug={`${slug}-${num}`}
-              />
-            </button>
-          );
-        })}
+        <ImageCarousel
+          name={name}
+          numImgs={numImgs}
+          slideIdx={slideIdx}
+          slug={slug}
+        />
       </div>
     </>
   );
