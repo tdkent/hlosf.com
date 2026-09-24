@@ -15,10 +15,17 @@ ReactModal.setAppElement("#root");
 
 export default function Modal({ children, setShowModal, showModal }: Props) {
   useScrollLock();
+
+  const root = document.querySelector("#root") as Element;
+
   return (
     <ReactModal
+      className="w-full"
+      contentLabel="Image Carousel Modal"
       isOpen={showModal}
+      onAfterClose={() => root.removeAttribute("aria-hidden")}
       onRequestClose={() => setShowModal(false)}
+      shouldReturnFocusAfterClose
       style={{
         overlay: {
           position: "fixed",
@@ -40,8 +47,6 @@ export default function Modal({ children, setShowModal, showModal }: Props) {
           outline: "none",
         },
       }}
-      contentLabel="Modal"
-      className="w-full"
     >
       <button
         aria-label="Close"
