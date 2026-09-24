@@ -14,20 +14,25 @@ interface Props {
 Modal.setAppElement("#root");
 
 export default function LandmarkImages({ name, numImgs, slug }: Props) {
-  const [showModal, setShowModal] = useState(false);
-  const [slideIdx, setSlideIdx] = useState<number>();
+  const [currSlideIdx, setCurrSlideIdx] = useState<number>(0);
+  const [initialSlideIdx, setInitialSlideIdx] = useState<number>(0);
   const [rootElement, setRootElement] = useState<HTMLDivElement>();
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     const root = document.querySelector("#root") as HTMLDivElement;
     if (root) setRootElement(root);
   }, []);
 
-  const imgNumArr = Array.from({ length: numImgs }, (_, idx) => idx + 1);
-
-  function handleClick(idx: number) {
+  function handleOpenFullscreenClick(idx: number) {
+    setCurrSlideIdx(idx);
+    setInitialSlideIdx(idx);
     setShowModal(true);
-    setSlideIdx(idx);
+  }
+
+  function handleCloseModalClick() {
+    setShowModal(false);
+    setInitialSlideIdx(currSlideIdx);
   }
 
   return (
@@ -64,7 +69,7 @@ export default function LandmarkImages({ name, numImgs, slug }: Props) {
         <button
           aria-label="Close"
           className="fixed top-4 right-2 z-30 cursor-pointer bg-black/50 rounded-full p-1 lg:top-6 lg:right-4"
-          onClick={() => setShowModal(false)}
+          onClick={handleCloseModalClick}
           type="button"
         >
           <VscChromeClose className="size-8 lg:size-9" />
@@ -72,7 +77,8 @@ export default function LandmarkImages({ name, numImgs, slug }: Props) {
         <ImageCarousel
           name={name}
           numImgs={numImgs}
-          slideIdx={slideIdx}
+          setInitialSlideIdx={setInitialSlideIdx}
+          initialSlideIdx={initialSlideIdx}
           slug={slug}
         />
       </Modal>
@@ -81,12 +87,14 @@ export default function LandmarkImages({ name, numImgs, slug }: Props) {
         <ImageCarousel
           name={name}
           numImgs={numImgs}
-          slideIdx={slideIdx}
+          setInitialSlideIdx={setInitialSlideIdx}
+          initialSlideIdx={initialSlideIdx}
           slug={slug}
         />
 
         <button
           className="w-fit text-base link underline hover:no-underline lg:text-lg"
+          onClick={() => handleOpenFullscreenClick(initialSlideIdx)}
           type="button"
         >
           View in fullscreen mode
