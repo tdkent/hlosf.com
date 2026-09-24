@@ -37,7 +37,11 @@ export default function LandmarkImages(props: Props) {
       </ReactModal>
 
       <div className="my-4 flex flex-col gap-4">
-        <SwiperCarousel onSwiper={setControlled} {...carouselProps} />
+        <SwiperCarousel
+          onSwiper={setControlled}
+          sizes="(max-width: 900px) 100vw, 900px"
+          {...carouselProps}
+        />
 
         <button
           className="w-fit text-base link underline hover:no-underline lg:text-lg"

@@ -17,6 +17,7 @@ interface Props {
   numImgs: number;
   onSwiper?: Dispatch<SetStateAction<SwiperType | null>>;
   setInitialSlideIdx: Dispatch<SetStateAction<number>>;
+  sizes?: string;
   slug: string;
 }
 
@@ -27,6 +28,7 @@ export default function SwiperCarousel({
   numImgs,
   onSwiper,
   setInitialSlideIdx,
+  sizes,
   slug,
 }: Props) {
   const imgNumArr = Array.from({ length: numImgs }, (_, idx) => idx + 1);
@@ -36,6 +38,7 @@ export default function SwiperCarousel({
       controller={controller}
       effect="fade"
       initialSlide={initialSlideIdx}
+      lazyPreload={false} // use native lazy loading
       modules={[A11y, Controller, EffectFade, Navigation]}
       navigation
       onNavigationNext={() => setInitialSlideIdx((prev) => ++prev)}
@@ -45,7 +48,7 @@ export default function SwiperCarousel({
       {imgNumArr.map((num) => {
         return (
           <SwiperSlide key={num} className="justify-center items-center">
-            <CustomImage altText={name} slug={`${slug}-${num}`} />
+            <CustomImage altText={name} sizes={sizes} slug={`${slug}-${num}`} />
           </SwiperSlide>
         );
       })}
