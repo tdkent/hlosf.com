@@ -1,5 +1,6 @@
 import Link from "next/link";
 import LandmarkImages from "@/components/pages/landmark/LandmarkImages";
+import MarkVisited from "@/components/pages/landmark/MarkVisited";
 import ParsedHtml from "@/components/pages/landmark/ParsedHtml";
 import GoogleMap from "@/components/pages/maps/GoogleMap";
 import { updateComplexLmNumber } from "@/lib/landmarks/updateComplexLmNumber";
@@ -32,6 +33,7 @@ export default function SingleLandmark({ landmark }: Props) {
           <p className="text-xl font-medium text-foreground-secondary sm:text-2xl lg:text-3xl">
             Landmark No. {updateComplexLmNumber(number)}
           </p>
+          <MarkVisited />
         </div>
         <dl className="flex flex-col gap-4 my-8 border-y py-4">
           {dedicationYear && (
