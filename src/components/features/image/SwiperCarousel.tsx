@@ -13,17 +13,15 @@ interface Props {
   numImgs: number;
   setSlideIdx: Dispatch<SetStateAction<number>>;
   sizes?: string;
-  slug: string;
+  slugs: string[];
 }
 
 export default function SwiperCarousel({
   name,
-  numImgs,
   setSlideIdx,
   sizes,
-  slug,
+  slugs,
 }: Props) {
-  const imgNumArr = Array.from({ length: numImgs }, (_, idx) => idx + 1);
   return (
     <Swiper
       className="my-swiper"
@@ -34,10 +32,10 @@ export default function SwiperCarousel({
       onNavigationNext={() => setSlideIdx((prev) => ++prev)}
       onNavigationPrev={() => setSlideIdx((prev) => --prev)}
     >
-      {imgNumArr.map((num) => {
+      {slugs.map((slug) => {
         return (
-          <SwiperSlide key={num} className="justify-center items-center">
-            <CustomImage altText={name} sizes={sizes} slug={`${slug}-${num}`} />
+          <SwiperSlide key={slug} className="justify-center items-center">
+            <CustomImage altText={name} sizes={sizes} slug={slug} />
           </SwiperSlide>
         );
       })}
