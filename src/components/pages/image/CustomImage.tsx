@@ -29,18 +29,18 @@ export default function CustomImage({
   const { avif, jpeg, webp } = imgSrcSets(slug);
 
   return (
-    <div className={`overflow-hidden w-full ${containerStyles}`}>
+    <div className={containerStyles ?? ""}>
       {error && (
         <div className="border w-full h-full flex items-center justify-center">
           <PiImageBrokenDuotone className="size-8" />
         </div>
       )}
-      <picture className={`w-full h-full ${error ? "hidden" : ""}`}>
+      <picture className={`${error ? "hidden " : ""}`}>
         <source srcSet={avif} sizes={sizes} type="image/avif" />
         <source srcSet={webp} sizes={sizes} type="image/webp" />
         <img
           alt={altText}
-          className={`object-cover w-full h-full ${imgStyles ?? ""}`}
+          className={imgStyles ?? ""}
           fetchPriority={fetchPriority}
           loading={lazyLoading}
           onError={() => {
