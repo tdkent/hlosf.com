@@ -12,15 +12,16 @@ interface Props {
 
 export default function SingleLandmark({ landmark }: Props) {
   const {
+    address,
+    dedicationYear,
     description,
     group,
-    address,
-    markerText,
     hasMarker,
-    dedicationYear,
+    id,
+    markerText,
     name,
-    numImgs,
     number,
+    numImgs,
     slug,
     update_html,
   } = landmark;
@@ -33,7 +34,7 @@ export default function SingleLandmark({ landmark }: Props) {
           <p className="text-xl font-medium text-foreground-secondary sm:text-2xl lg:text-3xl">
             Landmark No. {updateComplexLmNumber(number)}
           </p>
-          <MarkVisited />
+          <MarkVisited id={id} slug={slug} />
         </div>
         <dl className="flex flex-col gap-4 my-8 border-y py-4">
           {dedicationYear && (
@@ -82,7 +83,7 @@ export default function SingleLandmark({ landmark }: Props) {
       <section>
         <h2>Map</h2>
         <div className="my-4">
-          <GoogleMap landmark={landmark} variant="single" />
+          {/* <GoogleMap landmark={landmark} variant="single" /> */}
         </div>
       </section>
       {numImgs ? (
