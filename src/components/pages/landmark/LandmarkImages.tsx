@@ -21,7 +21,11 @@ export default function LandmarkImages({ name, numImgs, slug }: Props) {
   return (
     <>
       <ReactModal setShowModal={setShowModal} showModal={showModal}>
-        <CustomImage altText={name} slug={`${slug}-${slideIdx + 1}`} />
+        <CustomImage
+          altText={name}
+          imgStyles="w-screen h-screen object-contain"
+          slug={`${slug}-${slideIdx + 1}`}
+        />
       </ReactModal>
 
       <div className="my-4 flex flex-col gap-4">
