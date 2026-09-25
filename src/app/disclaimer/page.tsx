@@ -35,7 +35,8 @@ export default function Disclaimer() {
           The site provides an interactive feature to record landmarks the user
           has visited. Landmark data is stored in the user's browser strictly
           for the purpose of tracking visited landmarks, and does not include
-          personal information.
+          personal information. This data may be lost if the user clears their
+          browser's site cache.
         </p>
         <h2>Technical Data and Server Logs</h2>
         <p>
@@ -86,10 +87,10 @@ export default function Disclaimer() {
             Wikimedia Commons
           </Link>
           .
-          <p>
-            All original images, including images of landmark sites and markers,
-            are copyrighted to Historical Landmarks of San Francisco website.
-          </p>
+        </p>
+        <p>
+          All original images, including images of landmark sites and markers,
+          are copyrighted to Historical Landmarks of San Francisco website.
         </p>
         <p>
           Images and other content displayed on this site are provided for
