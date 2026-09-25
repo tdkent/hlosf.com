@@ -25,7 +25,15 @@ const LandmarksList = ({ sortedLandmarks }: Props) => {
   return (
     <ul className="grid grid-cols-1 my-4">
       {sortedLandmarks.map((landmark) => {
-        return <LandmarksListItem key={landmark.id} landmark={landmark} />;
+        const hasVisited = visited.find((lm) => lm.id === landmark.id);
+
+        return (
+          <LandmarksListItem
+            key={landmark.id}
+            landmark={landmark}
+            hasVisited={!!hasVisited}
+          />
+        );
       })}
     </ul>
   );

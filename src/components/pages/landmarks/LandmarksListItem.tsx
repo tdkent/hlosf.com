@@ -1,13 +1,14 @@
 import Link from "next/link";
-import { FaAngleRight } from "react-icons/fa";
+import { FaAngleRight, FaCheck } from "react-icons/fa";
 import { updateComplexLmNumber } from "@/lib/landmarks/updateComplexLmNumber";
 import type { Landmark } from "@/lib/types";
 
 interface Props {
+  hasVisited: boolean;
   landmark: Landmark;
 }
 
-export default function LandmarksListItem({ landmark }: Props) {
+export default function LandmarksListItem({ hasVisited, landmark }: Props) {
   const { group, number, slug, name } = landmark;
 
   return (
@@ -21,6 +22,7 @@ export default function LandmarksListItem({ landmark }: Props) {
                 No. {updateComplexLmNumber(number)}
               </span>
               <span>Group {group}</span>
+              {hasVisited && <FaCheck className="fill-green-600" />}
             </div>
           </div>
           <FaAngleRight className="size-4 fill-foreground-secondary shrink-0 lg:size-5" />
