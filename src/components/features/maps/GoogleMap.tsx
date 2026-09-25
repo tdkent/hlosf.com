@@ -5,7 +5,7 @@ import {
   Map as GMap,
   type MapProps,
 } from "@vis.gl/react-google-maps";
-import MarkerWithInfoWindow from "@/components/pages/maps/MarkerWithInfoWindow";
+import MarkerWithInfoWindow from "@/components/features/maps/MarkerWithInfoWindow";
 import { config } from "@/lib/config";
 import { getMapBounds } from "@/lib/guide/getMapBounds";
 import type { Landmark } from "@/lib/types";
