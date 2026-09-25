@@ -2,16 +2,13 @@
 
 import { useEffect, useState } from "react";
 import { FaCheck } from "react-icons/fa";
-import type { Landmark } from "@/lib/types";
+import { STORAGE_ITEM } from "@/lib/constants";
+import type { VisitedLandmark } from "@/lib/types";
 
 interface Props {
   id: number;
   slug: string;
 }
-
-type VisitedLandmark = Pick<Landmark, "id" | "slug">;
-
-const STORAGE_ITEM = "sitesVisited";
 
 export default function MarkVisited({ id, slug }: Props) {
   const [visited, setVisited] = useState<VisitedLandmark[]>([]);
