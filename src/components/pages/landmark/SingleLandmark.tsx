@@ -80,7 +80,7 @@ export default function SingleLandmark({ landmark }: Props) {
       <section>
         <h2>Map</h2>
         <div className="my-4">
-          <GoogleMap landmark={landmark} variant="single" />
+          {/* <GoogleMap landmark={landmark} variant="single" /> */}
         </div>
       </section>
       {numImgs ? (

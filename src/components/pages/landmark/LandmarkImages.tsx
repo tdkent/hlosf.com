@@ -5,7 +5,7 @@ import SwiperCarousel from "@/components/pages/image/SwiperCarousel";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
-import type { Swiper as SwiperType } from "swiper";
+import CustomImage from "@/components/pages/image/CustomImage";
 import ReactModal from "@/components/ui/ReactModal";
 
 interface Props {
@@ -14,33 +14,23 @@ interface Props {
   slug: string;
 }
 
-export default function LandmarkImages(props: Props) {
+export default function LandmarkImages({ name, numImgs, slug }: Props) {
   const [showModal, setShowModal] = useState(false);
-  const [initialSlideIdx, setInitialSlideIdx] = useState<number>(0);
-
-  // store controlled swiper instance
-  const [controlled, setControlled] = useState<SwiperType | null>(null);
-
-  const carouselProps = {
-    setInitialSlideIdx,
-    initialSlideIdx,
-    ...props,
-  };
+  const [slideIdx, setSlideIdx] = useState<number>(0);
 
   return (
     <>
       <ReactModal setShowModal={setShowModal} showModal={showModal}>
-        <SwiperCarousel
-          controller={{ control: controlled }}
-          {...carouselProps}
-        />
+        <CustomImage altText={name} slug={`${slug}-${slideIdx + 1}`} />
       </ReactModal>
 
       <div className="my-4 flex flex-col gap-4">
         <SwiperCarousel
-          onSwiper={setControlled}
+          name={name}
+          numImgs={numImgs}
+          setSlideIdx={setSlideIdx}
+          slug={slug}
           sizes="(max-width: 900px) 100vw, 900px"
-          {...carouselProps}
         />
 
         <button
@@ -48,7 +38,7 @@ export default function LandmarkImages(props: Props) {
           onClick={() => setShowModal(true)}
           type="button"
         >
-          View in fullscreen mode
+          View image in fullscreen
         </button>
       </div>
     </>

@@ -3,7 +3,8 @@
 import { type Dispatch, type SetStateAction, useEffect, useState } from "react";
 import { VscChromeClose } from "react-icons/vsc";
 import Modal from "react-modal";
-import { useScrollLock } from "usehooks-ts";
+
+// import { useScrollLock } from "usehooks-ts";
 
 interface Props {
   children: React.ReactNode;
@@ -18,14 +19,13 @@ export default function ReactModal({
   setShowModal,
   showModal,
 }: Props) {
+  // useScrollLock();
   const [rootElement, setRootElement] = useState<HTMLDivElement>();
 
   useEffect(() => {
     const root = document.querySelector("#root") as HTMLDivElement;
     if (root) setRootElement(root);
   }, []);
-
-  useScrollLock();
 
   return (
     <Modal
