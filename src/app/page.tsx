@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { FaArrowCircleRight } from "react-icons/fa";
-import CustomImage from "@/components/pages/image/CustomImage";
+import CustomImage from "@/components/features/image/CustomImage";
 
 const title = "Explore SF history | Historic Landmarks of San Francisco";
 

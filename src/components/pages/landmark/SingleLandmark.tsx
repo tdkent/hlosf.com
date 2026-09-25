@@ -1,8 +1,8 @@
 import Link from "next/link";
+import GoogleMap from "@/components/features/maps/GoogleMap";
 import LandmarkImages from "@/components/pages/landmark/LandmarkImages";
 import MarkVisited from "@/components/pages/landmark/MarkVisited";
 import ParsedHtml from "@/components/pages/landmark/ParsedHtml";
-import GoogleMap from "@/components/pages/maps/GoogleMap";
 import { updateComplexLmNumber } from "@/lib/landmarks/updateComplexLmNumber";
 import type { Landmark } from "@/lib/types";
 

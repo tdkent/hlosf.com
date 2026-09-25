@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import GoogleMap from "@/components/features/maps/GoogleMap";
 import LandmarksListItem from "@/components/pages/landmarks/LandmarksListItem";
-import GoogleMap from "@/components/pages/maps/GoogleMap";
 import { getGroupSize } from "@/lib/guide/getGroupSize";
 import { getLandmarksByGroupId } from "@/lib/guide/getLandmarksByGroupId";
 import { validateGroupId } from "@/lib/guide/validateGroupId";

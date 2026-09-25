@@ -1,12 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import SwiperCarousel from "@/components/pages/image/SwiperCarousel";
+import SwiperCarousel from "@/components/features/image/SwiperCarousel";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 import { useScrollLock } from "usehooks-ts";
-import CustomImage from "@/components/pages/image/CustomImage";
+import CustomImage from "@/components/features/image/CustomImage";
 import ReactModal from "@/components/ui/ReactModal";
 
 interface Props {
