@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { FaCheck } from "react-icons/fa";
 import type { Landmark } from "@/lib/types";
 
 interface Props {
@@ -14,6 +15,7 @@ const STORAGE_ITEM = "sitesVisited";
 
 export default function MarkVisited({ id, slug }: Props) {
   const [visited, setVisited] = useState<VisitedLandmark[]>([]);
+  const [hasVisited, setHasVisited] = useState(false);
 
   // Check local storage for sites visited data, or create an empty array
   useEffect(() => {
@@ -25,9 +27,15 @@ export default function MarkVisited({ id, slug }: Props) {
     }
   }, []);
 
+  // Track visited boolean value
+  useEffect(() => {
+    const hasVisited = visited.find((landmark) => landmark.id === id);
+    setHasVisited(!!hasVisited);
+  }, [id, visited]);
+
   function handleClick() {
     const currLandmark = { id, slug };
-    const hasVisited = visited.find((landmark) => landmark.id === id);
+    // const hasVisited = visited.find((landmark) => landmark.id === id);
 
     const updatedData = hasVisited
       ? // Remove if already visited
@@ -41,8 +49,19 @@ export default function MarkVisited({ id, slug }: Props) {
 
   return (
     <div>
-      <button onClick={handleClick} type="button">
-        Mark visited
+      <button
+        className="border rounded-lg bg-background-secondary px-6 py-2.5 w-fit font-medium cursor-pointer"
+        onClick={handleClick}
+        type="button"
+      >
+        {hasVisited ? (
+          <span className="flex items-center gap-2.5">
+            <FaCheck className="fill-green-600" />
+            Visited
+          </span>
+        ) : (
+          "Not visited"
+        )}
       </button>
     </div>
   );
