@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { FaArrowCircleRight } from "react-icons/fa";
-import CustomImage from "@/components/features/image/CustomImage";
+import SplashCarousel from "@/components/pages/home/SplashCarousel";
 
 const title = "Explore SF history | Historic Landmarks of San Francisco";
 
@@ -22,14 +22,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <div>
-      <CustomImage
-        altText="The Conservatory of Flowers, San Francisco"
-        containerStyles="aspect-3/2 rounded-lg shadow-lg shadow-foreground-secondary lg:my-10 dark:shadow-none"
-        fetchPriority="high"
-        lazyLoading="eager"
-        sizes="(max-width: 900px) 100vw, 900px"
-        slug="the-conservatory-2"
-      />
+      <SplashCarousel />
 
       <details className="my-8">
         <summary className="cursor-pointer w-fit">
