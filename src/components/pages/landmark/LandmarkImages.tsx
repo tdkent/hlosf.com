@@ -5,6 +5,7 @@ import SwiperCarousel from "@/components/pages/image/SwiperCarousel";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
+import { useScrollLock } from "usehooks-ts";
 import CustomImage from "@/components/pages/image/CustomImage";
 import ReactModal from "@/components/ui/ReactModal";
 
@@ -18,9 +19,22 @@ export default function LandmarkImages({ name, numImgs, slug }: Props) {
   const [showModal, setShowModal] = useState(false);
   const [slideIdx, setSlideIdx] = useState<number>(0);
 
+  const { lock, unlock } = useScrollLock({
+    autoLock: false,
+  });
+
+  function handleClick() {
+    setShowModal(true);
+    lock();
+  }
+
   return (
     <>
-      <ReactModal setShowModal={setShowModal} showModal={showModal}>
+      <ReactModal
+        setShowModal={setShowModal}
+        showModal={showModal}
+        unlock={unlock}
+      >
         <CustomImage
           altText={name}
           imgStyles="w-screen h-screen object-contain"
@@ -39,7 +53,7 @@ export default function LandmarkImages({ name, numImgs, slug }: Props) {
 
         <button
           className="w-fit text-base link underline hover:no-underline lg:text-lg"
-          onClick={() => setShowModal(true)}
+          onClick={handleClick}
           type="button"
         >
           View image in fullscreen
