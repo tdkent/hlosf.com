@@ -28,6 +28,9 @@ export default function LandmarkImages({ name, numImgs, slug }: Props) {
     lock();
   }
 
+  const imgNumArr = Array.from({ length: numImgs }, (_, idx) => idx + 1);
+  const slugs = imgNumArr.map((num) => `${slug}-${num}`);
+
   return (
     <>
       <ReactModal
@@ -47,7 +50,7 @@ export default function LandmarkImages({ name, numImgs, slug }: Props) {
           name={name}
           numImgs={numImgs}
           setSlideIdx={setSlideIdx}
-          slug={slug}
+          slugs={slugs}
           sizes="(max-width: 900px) 100vw, 900px"
         />
 
