@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useLocalStorage } from "usehooks-ts";
 import LandmarksListItem from "@/components/pages/landmarks/LandmarksListItem";
 import { STORAGE_ITEM } from "@/lib/constants";
 import type { Landmark, VisitedLandmark } from "@/lib/types";
@@ -10,17 +10,7 @@ interface Props {
 }
 
 const LandmarksList = ({ landmarks }: Props) => {
-  const [visited, setVisited] = useState<VisitedLandmark[]>([]);
-
-  // Check local storage for sites visited data, or create an empty array
-  useEffect(() => {
-    const dataInStorage = localStorage.getItem(STORAGE_ITEM);
-    if (!dataInStorage) {
-      localStorage.setItem(STORAGE_ITEM, JSON.stringify([]));
-    } else {
-      setVisited(JSON.parse(dataInStorage));
-    }
-  }, []);
+  const [visited] = useLocalStorage<VisitedLandmark[]>(STORAGE_ITEM, []);
 
   return (
     <ul className="my-4">
