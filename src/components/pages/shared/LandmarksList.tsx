@@ -6,10 +6,10 @@ import { STORAGE_ITEM } from "@/lib/constants";
 import type { Landmark, VisitedLandmark } from "@/lib/types";
 
 interface Props {
-  sortedLandmarks: Landmark[];
+  landmarks: Landmark[];
 }
 
-const LandmarksList = ({ sortedLandmarks }: Props) => {
+const LandmarksList = ({ landmarks }: Props) => {
   const [visited, setVisited] = useState<VisitedLandmark[]>([]);
 
   // Check local storage for sites visited data, or create an empty array
@@ -23,8 +23,8 @@ const LandmarksList = ({ sortedLandmarks }: Props) => {
   }, []);
 
   return (
-    <ul className="grid grid-cols-1 my-4">
-      {sortedLandmarks.map((landmark) => {
+    <ul className="my-4">
+      {landmarks.map((landmark) => {
         const hasVisited = visited.find((lm) => lm.id === landmark.id);
 
         return (
