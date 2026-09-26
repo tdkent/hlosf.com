@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import LandmarksList from "@/components/pages/landmarks/LandmarksList";
 import SortLandmarksList from "@/components/pages/landmarks/SortLandmarksList";
+import LandmarksList from "@/components/pages/shared/LandmarksList";
 import { getSortedLandmarks } from "@/lib/landmarks/sortLandmarks";
 
 const title = "Index of Landmarks";
@@ -30,7 +30,7 @@ export default async function LandmarksPage({
     <>
       <h1>Index of Landmarks</h1>
       <SortLandmarksList />
-      <LandmarksList sortedLandmarks={sortedLandmarks} />
+      <LandmarksList landmarks={sortedLandmarks} />
     </>
   );
 }

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import GoogleMap from "@/components/features/maps/GoogleMap";
-import LandmarksListItem from "@/components/pages/landmarks/LandmarksListItem";
+import LandmarksList from "@/components/pages/shared/LandmarksList";
 import { getGroupSize } from "@/lib/guide/getGroupSize";
 import { getLandmarksByGroupId } from "@/lib/guide/getLandmarksByGroupId";
 import { validateGroupId } from "@/lib/guide/validateGroupId";
@@ -70,11 +70,7 @@ export default async function GuideGroupPage({
       </section>
       <section>
         <h2>Landmarks</h2>
-        <ul className="my-4">
-          {landmarks.map((landmark) => {
-            return <LandmarksListItem key={landmark.id} landmark={landmark} />;
-          })}
-        </ul>
+        <LandmarksList landmarks={landmarks} />
       </section>
     </>
   );
