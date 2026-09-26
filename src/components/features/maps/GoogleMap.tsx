@@ -29,7 +29,6 @@ export default function GoogleMap(props: Props) {
     fullscreenControl: true,
     gestureHandling: "cooperative",
     mapId: config.MAP_ID,
-    mapType: false,
     scaleControl: false,
     streetViewControl: false,
     zoomControl: true,
